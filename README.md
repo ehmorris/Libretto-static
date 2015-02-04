@@ -7,4 +7,4 @@
 * To deploy, run `rake publish`
 
 # Style
-* Reference the (Medium style guide)[https://gist.github.com/fat/a47b882eb5f84293c4ed]
+* Reference the [Medium style guide](https://gist.github.com/fat/a47b882eb5f84293c4ed)
