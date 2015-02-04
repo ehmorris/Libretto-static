@@ -10,4 +10,4 @@
 * To deploy, run `rake publish`
 
 ## Code Style Guide
-* Reference the [Medium style guide](https://gist.github.com/fat/a47b882eb5f84293c4ed)
+* Reference the [Medium style guide](https://gist.github.com/fat/a47b882eb5f84293c4ed) except the JS section and the LESS specific rules e.g. the [components section](https://gist.github.com/fat/a47b882eb5f84293c4ed#components) is all valid, the [polyfils section](https://gist.github.com/fat/a47b882eb5f84293c4ed#polyfills) is not since LESS and SCSS mixins work differently, and the [variables section](https://gist.github.com/fat/a47b882eb5f84293c4ed#variables) is since LESS and SCSS variables are equivalent. Use data attributes for JS selections.
