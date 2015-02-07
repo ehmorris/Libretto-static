@@ -1,14 +1,21 @@
+// vendor
 @import 'bourbon';
 @import 'neat-settings';
 @import 'neat';
 
+// helpers
 @import 'variables';
 @import 'fonts';
 @import 'base';
 
-@import 'layout';
-
+// components
+@import 'mainContainer';
 @import 'hero';
 @import 'headerGroup';
+@import 'arrowList';
 
+// page specific
+@import 'index';
+
+// utilities — include last
 @import 'u';

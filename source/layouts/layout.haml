@@ -7,7 +7,7 @@
     %title
       = current_page.data.title || 'Libretto'
     %link{ 'href' => 'stylesheets/application.css', 'rel' => 'stylesheet', 'type' => 'text/css' }
-  %body
+  %body(class = page_classes)
     .mainContainer
       = partial 'mainNavigation'
       = yield
