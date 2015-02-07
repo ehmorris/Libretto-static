@@ -1,9 +1,11 @@
 body {
+  color: $gray;
   font: 400 1em/1.4 $body-font;
   margin: 0;
-  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
 }
 
 h1, h2, h3, h4 {
   font-family: $header-font;
+  line-height: 1.2;
 }

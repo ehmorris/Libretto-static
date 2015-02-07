@@ -1,0 +1,63 @@
+.hero {
+  @include fill-parent();
+  overflow: auto;
+}
+
+.hero--dark {
+  background-color: $gray;
+  color: #fff;
+}
+
+.hero--headline {
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin: 2.6em 0;
+    text-align: center;
+    word-spacing: -.1em;
+  }
+
+  span {
+    color: $purple;
+    font-weight: 800;
+  }
+}
+
+.hero--excerpt {
+  border: 1px solid #e2e2e2;
+  border-width: 1px 0 1px;
+  margin-top: 4rem;
+
+  &.hero--dark {
+    border-width: 0;
+  }
+}
+
+.hero-contentFull {
+  @include span-columns(19);
+  @include shift(2);
+}
+
+.hero-contentSide {
+  @include span-columns(11);
+  @include shift(2);
+}
+
+.hero-imageSide,
+.hero-imageFull {
+  line-height: 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+
+.hero-imageFull {
+  @include fill-parent();
+
+}
+
+.hero-imageSide {
+  @include span-columns(9);
+}
