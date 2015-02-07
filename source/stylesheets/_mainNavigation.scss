@@ -1,0 +1,27 @@
+.mainNavigation {
+  border-bottom: 1px solid $border-gray;
+  @include fill-parent();
+  margin-top: 1rem;
+
+  a, a:visited, a:active {
+    color: $purple;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  a:not(.mainNavigation-logo) {
+    padding: 1rem 1rem .4rem;
+  }
+}
+
+.mainNavigation-logo {
+  font-family: $header-font;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.mainNavigation-sections {
+  @include direction-context(right-to-left) {
+    @include shift(2)
+  }
+}
