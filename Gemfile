@@ -6,6 +6,7 @@ gem 'middleman-gh-pages'
 
 gem 'sass'
 gem 'bourbon'
+gem 'neat'
 
 gem 'coffee-script'
 
