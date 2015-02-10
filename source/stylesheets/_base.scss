@@ -8,4 +8,5 @@ body {
 h1, h2, h3, h4 {
   font-family: $header-font;
   line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
 }
