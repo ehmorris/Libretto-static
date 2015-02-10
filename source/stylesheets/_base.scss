@@ -3,10 +3,10 @@ body {
   font: 400 1em/1.4 $body-font;
   margin: 0;
   text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4 {
   font-family: $header-font;
   line-height: 1.2;
-  -webkit-font-smoothing: antialiased;
 }
