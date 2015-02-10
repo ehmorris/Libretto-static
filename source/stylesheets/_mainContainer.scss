@@ -1,3 +1,4 @@
 .mainContainer {
   @include outer-container;
+  width: $max-width;
 }
