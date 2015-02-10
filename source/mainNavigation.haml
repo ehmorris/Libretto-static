@@ -1,5 +1,7 @@
 %nav.mainNavigation
-  = link_to 'Libretto.', '/', class: 'mainNavigation-logo'
+  = link_to '/', class: 'mainNavigation-logo' do
+    = partial 'assets/swash'
+    Libretto.
   .mainNavigation-sections.u-pullRight
     = link_to 'Who we are', '/'
     = link_to 'What we do', '/'

@@ -18,6 +18,14 @@
   font-family: $header-font;
   font-size: 2rem;
   font-weight: 800;
+
+  svg {
+    display: inline-block;
+    fill: $purple;
+    height: 1rem;
+    padding: 0 .5rem 0 1.25rem;
+    @include position(relative, -.2rem 0 0 0);
+  }
 }
 
 .mainNavigation-sections {
