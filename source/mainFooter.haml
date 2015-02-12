@@ -7,8 +7,10 @@
       %span Content
 
   %section.mainFooter-contact
-    = link_to 'facebook', '//facebook.com/pages/Libretto/56796753771'
-    = link_to 'twitter', '//twitter.com/librettoboston'
+    = link_to '//twitter.com/librettoboston', class: 'social' do
+      = partial 'assets/twitter-svg'
+    = link_to '//facebook.com/pages/Libretto/56796753771', class: 'social' do
+      = partial 'assets/facebook-svg'
     %address.mainFooter-contact-address
       %span 560 Harrison Avenue
       %span Suite 405
