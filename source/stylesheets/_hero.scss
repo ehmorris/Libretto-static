@@ -45,6 +45,13 @@
   @include shift(2);
 }
 
+.hero-author {
+  color: $light-gray;
+  font-size: .8em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
 .hero-imageSide,
 .hero-imageFull {
   line-height: 0;
