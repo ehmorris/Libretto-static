@@ -1,13 +1,17 @@
 %footer.mainFooter
-  %section
-    Libretto.
-    Strategy | Messaging | Content
+  %section.mainFooter-logo
+    %h3 Libretto.
+    %p
+      %span Strategy
+      %span Messaging
+      %span Content
 
-  %section
-    facebook
-    twitter
-    560 Harrison Avenue
-    Suite 405
-    Boston, MA 02118
-    617.451.5113
-    hey@libretto-inc.com
+  %section.mainFooter-contact
+    = link_to 'facebook', '//facebook.com/pages/Libretto/56796753771'
+    = link_to 'twitter', '//twitter.com/librettoboston'
+    %address.mainFooter-contact-address
+      %span 560 Harrison Avenue
+      %span Suite 405
+      %span Boston, MA 02118
+      %span.phone 617.451.5113
+    = link_to 'hey@libretto-inc.com', 'mailto:hey@libretto-inc.com'

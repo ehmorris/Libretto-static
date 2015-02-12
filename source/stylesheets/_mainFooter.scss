@@ -1,5 +1,47 @@
 .mainFooter {
   background-color: $gray;
   color: #fff;
+  @include fill-parent();
   margin-top: 4rem;
+  overflow: auto;
+  padding: 2rem 0 4rem;
+}
+
+.mainFooter-logo {
+  @include shift(2);
+  @include span-columns(5);
+
+  h3 {
+    font-family: $header-font;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+  }
+
+  p {
+    margin: .5rem 0;
+  }
+
+  span:not(:last-child)::after {
+    color: $blue;
+    content: ' | ';
+  }
+}
+
+.mainFooter-contact {
+  @include span-columns(7);
+  float: right;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.mainFooter-contact-address {
+  margin: 1rem 0;
+
+  span {
+    display: block;
+    font-style: normal;
+  }
 }
