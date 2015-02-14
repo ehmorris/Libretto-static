@@ -9,4 +9,8 @@
       @include shift(1 of 11);
     }
   }
+
+  .additional {
+    overflow: auto;
+  }
 }

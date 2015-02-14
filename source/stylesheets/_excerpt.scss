@@ -1,0 +1,28 @@
+.excerpt {
+  @include span-columns(7);
+  margin-top: 4rem;
+
+  &:not(:first-of-type) {
+    @include shift(1);
+  }
+
+  img {
+    border-radius: 50%;
+    @include shift(2 of 7);
+    @include span-columns(3 of 7);
+  }
+
+  .headerGroup {
+    clear: both;
+    padding-top: 2.5rem;
+  }
+
+  .headerGroup-mainhead {
+    font-size: 1.5rem;
+  }
+
+  p::after {
+    color: $blue;
+    content: ' –\00BB';
+  }
+}
