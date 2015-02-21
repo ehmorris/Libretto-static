@@ -18,23 +18,25 @@
     = image_tag 'http://placehold.it/560x590'
 
 %section.hero.excerpt
-  .excerpt-contentFull
-    .headerGroup
-      %span.headerGroup-prehead Project spotlight
-      %h2.headerGroup-mainhead MIT 150th Anniversary Theme:
-      %h3.headerGroup-subhead A theme that journeyed into space
-  .excerpt-imageFull
-    = image_tag 'http://placehold.it/1500x450'
+  = link_to '#', class: 'excerpt-fullLink' do
+    .excerpt-contentFull
+      .headerGroup
+        %span.headerGroup-prehead Project spotlight
+        %h2.headerGroup-mainhead MIT 150th Anniversary Theme:
+        %h3.headerGroup-subhead A theme that journeyed into space
+    .excerpt-imageFull
+      = image_tag 'http://placehold.it/1500x450'
 
 %section.hero.excerpt
-  .excerpt-contentSide
-    .headerGroup
-      %span.headerGroup-prehead My latest obsession
-      %h2.headerGroup-mainhead Benjamin Franklin’s Sister
-    %p I’ve spent the last few weeks devouring book of ages, Jill Lepore’s fascinating study of the relationship between dolor sit amet, consectetur adipiscing elit. Proin et viverra neque. Sed ac magna non sem imperdiet pharetra. Vestibulum rutrum leo ac tellus fermentum tempor. Aenean eu metus enim. Nam nec sagittis dolor. Duis purus mi, aliquet ac iaculis quis, lacinia faucibus diam. Aliquam erat volutpat. Sed sit amet consequat ante.
-    %span.excerpt-author by First Last
-  .excerpt-imageSide.u-pullRight
-    = image_tag 'http://placehold.it/560x590'
+  = link_to '#', class: 'excerpt-fullLink' do
+    .excerpt-contentSide
+      .headerGroup
+        %span.headerGroup-prehead My latest obsession
+        %h2.headerGroup-mainhead Benjamin Franklin’s Sister
+      %p I’ve spent the last few weeks devouring book of ages, Jill Lepore’s fascinating study of the relationship between dolor sit amet, consectetur adipiscing elit. Proin et viverra neque. Sed ac magna non sem imperdiet pharetra. Vestibulum rutrum leo ac tellus fermentum tempor. Aenean eu metus enim. Nam nec sagittis dolor. Duis purus mi, aliquet ac iaculis quis, lacinia faucibus diam. Aliquam erat volutpat. Sed sit amet consequat ante.
+      %span.excerpt-author by First Last
+    .excerpt-imageSide.u-pullRight
+      = image_tag 'http://placehold.it/560x590'
 
 %section.hero.hero--lightBackground.mantra
   .quote
@@ -45,8 +47,9 @@
 %section.additional
   - 3.times do
     .excerpt.excerpt--column
-      = image_tag 'http://placehold.it/200x200', class: 'excerpt-imageCenter'
-      .headerGroup.headerGroup--small
-        %span.headerGroup-prehead What’s on our mind
-        %h2.headerGroup-mainhead A private eye’s guide to Baltimore
-      %p Proin et viverra neque. Sed ac magna non sem imperdiet pharetra. Vestibulum rutrum leo ac tellus fermentum tempor. Aenean eu metus enim. Nam nec sagittis dolor. Duis purus mi, aliquet ac iaculis quis, lacinia faucibus diam. Aliquam erat volutpat. Sed sit amet consequat ante.
+      = link_to '#', class: 'excerpt-fullLink' do
+        = image_tag 'http://placehold.it/200x200', class: 'excerpt-imageCenter'
+        .headerGroup.headerGroup--small
+          %span.headerGroup-prehead What’s on our mind
+          %h2.headerGroup-mainhead A private eye’s guide to Baltimore
+        %p Proin et viverra neque. Sed ac magna non sem imperdiet pharetra. Vestibulum rutrum leo ac tellus fermentum tempor. Aenean eu metus enim. Nam nec sagittis dolor. Duis purus mi, aliquet ac iaculis quis, lacinia faucibus diam. Aliquam erat volutpat. Sed sit amet consequat ante.

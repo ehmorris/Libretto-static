@@ -4,6 +4,12 @@
   }
 }
 
+.excerpt.hero {
+  border: 1px solid $border-gray;
+  border-width: 1px 0 0;
+  margin-top: 4rem;
+}
+
 .excerpt--column {
   @include span-columns(7);
   margin-top: 4rem;
@@ -13,16 +19,16 @@
   }
 }
 
+.excerpt-fullLink {
+  color: inherit;
+  display: block;
+  overflow: auto;
+}
+
 .excerpt-imageCenter {
   border-radius: 50%;
   @include shift(2 of 7);
   @include span-columns(3 of 7);
-}
-
-.excerpt.hero {
-  border: 1px solid $border-gray;
-  border-width: 1px 0 0;
-  margin-top: 4rem;
 }
 
 .excerpt-author {
