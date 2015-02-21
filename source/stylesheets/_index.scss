@@ -1,16 +1,19 @@
 .index {
-  .hero--dark {
+  .services {
     .headerGroup {
       margin-top: 4rem;
     }
 
     .arrowList {
-      font-size: 1.5rem;
       @include shift(1 of 11);
     }
   }
 
   .additional {
     overflow: auto;
+  }
+
+  .mantra {
+    overflow: hidden;
   }
 }

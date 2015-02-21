@@ -1,0 +1,37 @@
+.quote {
+  color: $purple;
+  @include fill-parent();
+  padding-top: 5rem;
+  @include shift(1);
+  @include span-columns(21);
+  text-align: center;
+
+  p {
+    font-size: 2.8rem;
+    font-style: italic;
+    margin: 1rem 0;
+  }
+}
+
+.quote-attribution {
+  clear: both;
+  color: $purple;
+  display: block;
+
+  &::before {
+    content: '— ';
+  }
+}
+
+.quote-label {
+  background: $gray;
+  clear: both;
+  color: #fff;
+  display: inline-block;
+  font-family: $header-font;
+  font-size: .8rem;
+  font-weight: bold;
+  margin-top: 3rem;
+  padding: .4rem 3rem;
+  text-transform: uppercase;
+}

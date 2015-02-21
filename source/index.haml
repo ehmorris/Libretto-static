@@ -1,52 +1,52 @@
-%section.hero.hero--headline
-  %h1
-    %span Libretto
+%section.hero.hero--largeMargin
+  %h1.hero-headline
+    %strong.u-purple Libretto
     helps organizations articulate
     %br
     what they do, believe, and hope to achieve
 
-%section.hero.hero--dark
-  .hero-contentSide
+%section.hero.hero--darkBackground.services
+  .excerpt-contentSide
     .headerGroup
       %h2.headerGroup-mainhead We do four things extremely well:
-    %ul.arrowList
+    %ul.arrowList.arrowList--large
       %li Messaging
       %li Names & Themes
       %li Communications Strategy
       %li Content Development
-  .hero-imageSide.u-pullRight
+  .excerpt-imageSide.u-pullRight
     = image_tag 'http://placehold.it/560x590'
 
-%section.hero.hero--excerpt
-  .hero-contentFull
+%section.hero.excerpt
+  .excerpt-contentFull
     .headerGroup
       %span.headerGroup-prehead Project spotlight
       %h2.headerGroup-mainhead MIT 150th Anniversary Theme:
       %h3.headerGroup-subhead A theme that journeyed into space
-  .hero-imageFull
+  .excerpt-imageFull
     = image_tag 'http://placehold.it/1500x450'
 
-%section.hero.hero--excerpt
-  .hero-contentSide
+%section.hero.excerpt
+  .excerpt-contentSide
     .headerGroup
       %span.headerGroup-prehead My latest obsession
       %h2.headerGroup-mainhead Benjamin Franklin’s Sister
     %p I’ve spent the last few weeks devouring book of ages, Jill Lepore’s fascinating study of the relationship between dolor sit amet, consectetur adipiscing elit. Proin et viverra neque. Sed ac magna non sem imperdiet pharetra. Vestibulum rutrum leo ac tellus fermentum tempor. Aenean eu metus enim. Nam nec sagittis dolor. Duis purus mi, aliquet ac iaculis quis, lacinia faucibus diam. Aliquam erat volutpat. Sed sit amet consequat ante.
-    %span.hero-author by First Last
-  .hero-imageSide.u-pullRight
+    %span.excerpt-author by First Last
+  .excerpt-imageSide.u-pullRight
     = image_tag 'http://placehold.it/560x590'
 
-%section.hero.hero--blockquote
-  .hero-quote
+%section.hero.hero--lightBackground.mantra
+  .quote
     %p Do not hurry, do not rest.
-  %span.hero-quote-attribution Goethe
-  %span.hero-label Mantra #14
+    %span.quote-attribution Goethe
+    %span.quote-label Mantra #14
 
 %section.additional
   - 3.times do
-    .excerpt
-      = image_tag 'http://placehold.it/200x200'
-      .headerGroup
+    .excerpt.excerpt--column
+      = image_tag 'http://placehold.it/200x200', class: 'excerpt-imageCenter'
+      .headerGroup.headerGroup--small
         %span.headerGroup-prehead What’s on our mind
         %h2.headerGroup-mainhead A private eye’s guide to Baltimore
       %p Proin et viverra neque. Sed ac magna non sem imperdiet pharetra. Vestibulum rutrum leo ac tellus fermentum tempor. Aenean eu metus enim. Nam nec sagittis dolor. Duis purus mi, aliquet ac iaculis quis, lacinia faucibus diam. Aliquam erat volutpat. Sed sit amet consequat ante.
