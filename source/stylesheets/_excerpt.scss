@@ -1,7 +1,6 @@
 .excerpt {
-  p:last-of-type::after {
-    color: $blue;
-    content: ' –\00BB';
+  p:last-of-type {
+    @include append-libretto-arrow;
   }
 }
 

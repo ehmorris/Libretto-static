@@ -2,3 +2,19 @@
   width: 105%;
   margin-left: -2.5%;
 }
+
+@mixin append-libretto-arrow {
+  &::after {
+    color: $blue;
+    content: ' –\00BB';
+    @content;
+  }
+}
+
+@mixin prepend-libretto-arrow {
+  &::before {
+    color: $blue;
+    content: ' –\00BB';
+    @content;
+  }
+}

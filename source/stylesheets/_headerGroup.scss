@@ -23,6 +23,7 @@
 }
 
 .headerGroup-subhead {
+  @include append-libretto-arrow;
   font-family: $body-font;
   font-weight: 400;
 }
