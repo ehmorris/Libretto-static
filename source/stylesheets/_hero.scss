@@ -1,5 +1,5 @@
 .hero {
-  @include fill-parent();
+  @include fill-overflow();
   overflow: auto;
 }
 

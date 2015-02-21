@@ -1,7 +1,7 @@
 .mainFooter {
   background-color: $gray;
   color: #fff;
-  @include fill-parent();
+  @include fill-overflow();
   margin-top: 4rem;
   overflow: auto;
   padding: 2rem 0 4rem;
