@@ -37,13 +37,7 @@
 .excerpt-fullLink {
   color: inherit;
   display: block;
-  overflow: auto;
-}
-
-.excerpt-imageCenter {
-  border-radius: 50%;
-  @include shift(2 of 7);
-  @include span-columns(3 of 7);
+  outline: none;
 }
 
 .excerpt-author {
@@ -64,6 +58,12 @@
   @include shift(2);
 }
 
+.excerpt-imageCenter {
+  border-radius: 50%;
+  @include shift(2 of 7);
+  @include span-columns(3 of 7);
+}
+
 .excerpt-imageSide,
 .excerpt-imageFull {
   line-height: 0;
@@ -80,4 +80,16 @@
 
 .excerpt-imageSide {
   @include span-columns(9);
+  float: right;
+}
+
+.hero {
+  .excerpt-imageFull {
+    @include fill-overflow();
+    padding: 0;
+  }
+
+  .excerpt-imageSide {
+    margin-right: -$overflow-width;
+  }
 }

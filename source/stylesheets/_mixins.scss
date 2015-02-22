@@ -1,8 +1,8 @@
 @mixin fill-overflow {
-  margin-left: -20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: calc(100% + 40px);
+  margin-left: -$overflow-width;
+  padding-left: $overflow-width;
+  padding-right: $overflow-width;
+  width: calc(100% + #{$overflow-width * 2});
 }
 
 @mixin append-libretto-arrow {
