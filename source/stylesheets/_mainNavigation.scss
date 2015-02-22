@@ -11,6 +11,11 @@
 
   a:not(.mainNavigation-logo) {
     padding: 1rem 1rem .4rem;
+
+    @include if_narrower_than($navigation-collapse-breakpoint) {
+      padding-left: 0;
+      padding-right: 1rem;
+    }
   }
 }
 
@@ -25,11 +30,23 @@
     height: 1rem;
     padding: 0 .5rem 0 1.25rem;
     @include position(relative, -.2rem null null null);
+
+    @include if_narrower_than($navigation-collapse-breakpoint) {
+      padding-left: 0;
+      padding-right: .25rem;
+    }
   }
 }
 
 .mainNavigation-sections {
-  @include direction-context(right-to-left) {
-    @include shift(2)
+  @include if_wider_than($navigation-widest-breakpoint) {
+    @include direction-context(right-to-left) {
+      @include shift(2)
+    }
+  }
+
+  @include if_narrower_than($navigation-collapse-breakpoint) {
+    // need more specificity to override utility function
+    .mainNavigation & { float: none; }
   }
 }
