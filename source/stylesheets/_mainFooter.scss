@@ -4,12 +4,19 @@
   @include fill-overflow();
   margin-top: 4rem;
   overflow: auto;
-  padding: 2rem 0 4rem;
+  padding-bottom: 4rem;
+  padding-top: 2rem;
 }
 
 .mainFooter-logo {
-  @include shift(2);
-  @include span-columns(14);
+  @include if_wider_than($two-column-breakpoint) {
+    @include shift(2);
+    @include span-columns(14);
+  }
+
+  @include if_narrower_than($two-column-breakpoint) {
+    @include fill-parent();
+  }
 
   h3 {
     font-family: $header-font;
@@ -29,8 +36,15 @@
 }
 
 .mainFooter-contact {
-  @include span-columns(7);
-  float: right;
+  @include if_wider_than($two-column-breakpoint) {
+    float: right;
+    @include span-columns(7);
+  }
+
+  @include if_narrower_than($two-column-breakpoint) {
+    @include fill-parent();
+    margin-top: 2rem;
+  }
 }
 
 .mainFooter-contact-social {
