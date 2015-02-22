@@ -1,6 +1,6 @@
 @mixin fill-overflow {
-  width: 105%;
-  margin-left: -2.5%;
+  width: calc(100% + 40px);
+  margin-left: -20px;
 }
 
 @mixin append-libretto-arrow {
@@ -16,5 +16,17 @@
     color: $blue;
     content: ' –\00BB';
     @content;
+  }
+}
+
+@mixin if_narrower_than($breakpoint) {
+  @media screen and (max-width: $breakpoint - 1) {
+    @content
+  }
+}
+
+@mixin if_wider_than($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content
   }
 }

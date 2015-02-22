@@ -9,7 +9,7 @@
 
 .mainFooter-logo {
   @include shift(2);
-  @include span-columns(5);
+  @include span-columns(14);
 
   h3 {
     font-family: $header-font;

@@ -1,4 +1,4 @@
 .mainContainer {
   @include outer-container;
-  width: $max-width;
+  padding: 0 20px;
 }
