@@ -11,11 +11,26 @@
 }
 
 .excerpt--column {
-  @include span-columns(7);
   margin-top: 4rem;
+  
+  @include if_wider_than($three-column-breakpoint) {
+    @include span-columns(7);
 
-  &:not(:first-of-type) {
-    @include shift(1);
+    &:not(:nth-child(3n+1)) {
+      @include shift(1);
+    }
+  }
+
+  @include if_wider_than_and_narrower_than($two-column-breakpoint, $three-column-breakpoint) {
+    @include span-columns(11);
+
+    &:nth-child(2n) {
+      @include shift(1);
+    }
+  }
+
+  @include if_narrower_than($two-column-breakpoint) {
+    @include fill-parent();
   }
 }
 
