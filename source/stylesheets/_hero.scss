@@ -17,6 +17,11 @@
 .hero--largeMargin {
   margin-bottom: 7.5rem;
   margin-top: 7.5rem;
+
+  @include if_narrower_than($headline-collapse-breakpoint) {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
 }
 
 .hero-headline {
@@ -30,5 +35,9 @@
     br {
       display: none;
     }
+  }
+  
+  @include if_narrower_than($headline-collapse-breakpoint) {
+    font-size: 2rem;
   }
 }
