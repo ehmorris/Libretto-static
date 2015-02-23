@@ -49,13 +49,25 @@
 }
 
 .excerpt-contentFull {
-  @include span-columns(19);
-  @include shift(2);
+  @include if_wider_than($headline-collapse-breakpoint) {
+    @include span-columns(19);
+    @include shift(2);
+  }
+
+  @include if_narrower_than($headline-collapse-breakpoint) {
+    @include fill-parent();
+  }
 }
 
 .excerpt-contentSide {
-  @include span-columns(11);
-  @include shift(2);
+  @include if_wider_than($headline-collapse-breakpoint) {
+    @include span-columns(11);
+    @include shift(2);
+  }
+
+  @include if_narrower_than($headline-collapse-breakpoint) {
+    @include fill-parent();
+  }
 }
 
 .excerpt-imageCenter {
@@ -81,6 +93,10 @@
 .excerpt-imageSide {
   @include span-columns(9);
   float: right;
+
+  @include if_narrower_than($headline-collapse-breakpoint) {
+    display: none;
+  }  
 }
 
 .hero {
