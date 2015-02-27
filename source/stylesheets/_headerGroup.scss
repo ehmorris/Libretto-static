@@ -29,6 +29,16 @@
   }
 }
 
+.headerGroup-mainhead {
+  border-bottom: 1px solid transparent;
+  display: inline;
+
+  &::before, &::after {
+    content: '';
+    display: block;
+  }
+}
+
 .headerGroup-subhead {
   @include append-libretto-arrow;
   font-family: $body-font;

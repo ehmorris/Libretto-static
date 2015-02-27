@@ -38,6 +38,10 @@
   color: inherit;
   display: block;
   outline: none;
+
+  &:hover .headerGroup-mainhead {
+    border-color: $gray;
+  }
 }
 
 .excerpt-author {
