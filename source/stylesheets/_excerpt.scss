@@ -41,8 +41,10 @@
   display: block;
   outline: none;
 
-  &:hover .headerGroup-mainhead {
-    border-color: $gray;
+  .no-touch & {
+    &:hover .headerGroup-mainhead {
+      border-color: $gray;
+    }
   }
 }
 
