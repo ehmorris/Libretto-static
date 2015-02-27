@@ -1,4 +1,6 @@
 .excerpt {
+  position: relative;
+
   p:last-of-type {
     @include append-libretto-arrow;
   }
@@ -84,23 +86,29 @@
 .excerpt-imageFull {
   line-height: 0;
   overflow: hidden;
+}
+
+.excerpt-imageFull {
+  @include fill-parent();
 
   img {
     width: 100%;
   }
 }
 
-.excerpt-imageFull {
-  @include fill-parent();
-}
-
 .excerpt-imageSide {
   @include span-columns(9);
-  float: right;
+  @include position(absolute, 0px $overflow-width 0px null);
 
   @include if_narrower_than($headline-collapse-breakpoint) {
     display: none;
-  }  
+  }
+
+  img {
+    max-height: 120%;
+    min-height: 100%;
+    min-width: 100%;
+  }
 }
 
 .hero {
