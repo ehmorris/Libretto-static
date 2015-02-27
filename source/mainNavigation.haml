@@ -2,8 +2,10 @@
   = link_to '/', class: 'mainNavigation-logo' do
     = partial 'assets/swash-svg'
     Libretto.
+  .mainNavigation-menuExpander
+    = partial 'assets/menu-svg'
   .mainNavigation-sections.u-pullRight
-    = link_to 'Who we are', '/'
-    = link_to 'What we do', '/'
-    = link_to 'Our work', '/'
-    = link_to 'The Cobbler’s Children', '/'
+    = link_to 'Who we are', '/', class: 'mainNavigation-sections-link'
+    = link_to 'What we do', '/', class: 'mainNavigation-sections-link'
+    = link_to 'Our work', '/', class: 'mainNavigation-sections-link'
+    = link_to 'The Cobbler’s Children', '/', class: 'mainNavigation-sections-link'

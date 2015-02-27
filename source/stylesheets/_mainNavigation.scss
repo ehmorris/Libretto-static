@@ -1,21 +1,16 @@
 .mainNavigation {
-  border-bottom: 1px solid $border-gray;
   @include fill-parent();
   margin-top: 1rem;
+  @include user-select(none);
+
+  @include if_wider_than($navigation-collapse-breakpoint) {
+    border-bottom: 1px solid $border-gray;
+  }
 
   a, a:visited, a:active {
     color: $purple;
     display: inline-block;
     text-decoration: none;
-  }
-
-  a:not(.mainNavigation-logo) {
-    padding: 1rem 1rem .4rem;
-
-    @include if_narrower_than($navigation-collapse-breakpoint) {
-      padding-left: 0;
-      padding-right: 1rem;
-    }
   }
 }
 
@@ -38,7 +33,27 @@
   }
 }
 
+.mainNavigation-menuExpander {
+  cursor: pointer;
+  float: right;
+  padding: 15px;
+  @include position(relative, null -15px null null);
+
+  @include if_wider_than($navigation-collapse-breakpoint) {
+    display: none;
+  }
+
+  svg {
+    fill: $purple;
+    height: 1rem;
+  }
+}
+
 .mainNavigation-sections {
+  &.mainNavigation-sections--visible {
+    display: block;
+  }
+
   @include if_wider_than($navigation-widest-breakpoint) {
     @include direction-context(right-to-left) {
       @include shift(2)
@@ -46,7 +61,24 @@
   }
 
   @include if_narrower_than($navigation-collapse-breakpoint) {
+    display: none;
+    
     // need more specificity to override utility function
     .mainNavigation & { float: none; }
+  }
+}
+
+.mainNavigation-sections-link {
+  outline: none;
+  padding: 1rem 1rem .4rem;
+
+  &:hover {
+    border-bottom: 1px solid $purple;
+  }
+
+  @include if_narrower_than($navigation-collapse-breakpoint) {
+    border-bottom: 1px solid $purple;
+    padding: .6rem 0;
+    width: 100%;
   }
 }

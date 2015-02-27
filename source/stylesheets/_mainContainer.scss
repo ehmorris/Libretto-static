@@ -1,4 +1,5 @@
 .mainContainer {
   @include outer-container;
   padding: 0 $overflow-width;
+  min-width: 290px;
 }
