@@ -1,0 +1,1 @@
+(function(){$(function(){return $(".mainNavigation-menuExpander").on("click",function(){return $(".mainNavigation-sections").toggleClass("mainNavigation-sections--visible")})})}).call(this);
