@@ -5,9 +5,14 @@
 
   li {
     position: relative;
+
     @include prepend-libretto-arrow {
       margin-right: .3em;
       @include position(absolute, null null null -1.3em);
+    }
+
+    > a {
+      color: inherit;
     }
   }
 }
