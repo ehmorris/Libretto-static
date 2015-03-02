@@ -1,0 +1,1 @@
+(function(){$(function(){var a;if($("body").hasClass("index"))return $(".mainNavigation").addClass("mainNavigation--collapsed"),a=$(".mainNavigation").height()+"px",$(".hero-headline").waypoint(function(){return $(".mainNavigation").toggleClass("mainNavigation--collapsed mainNavigation--background")},{offset:a})})}).call(this);
