@@ -7,9 +7,12 @@
     }
 
     .arrowList {
-      line-height: 2;
       margin-bottom: 4rem;
       @include shift(1 of 11);
+
+      li {
+        margin: 1rem 0;
+      }
     }
   }
 
