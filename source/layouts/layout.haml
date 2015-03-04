@@ -9,7 +9,7 @@
     %link{ 'href' => 'stylesheets/application.css', 'rel' => 'stylesheet', 'type' => 'text/css' }
   %body(class = page_classes)
     .mainContainer
-      = partial 'mainNavigation'
+      = partial 'mainNavigation', :locals => { :extra_classes => page_classes }
       = yield
       = partial 'mainFooter'
     %script{ 'src' => 'javascripts/application.js', 'type' => 'text/javascript' }
