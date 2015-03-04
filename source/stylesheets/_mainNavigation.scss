@@ -12,31 +12,20 @@
     border-bottom: 1px solid $border-gray;
   }
 
-  .logotype {
-    opacity: 1;
-    @include transition(.2s);
+  &.mainNavigation--miniLogo {
+    background: rgba(255, 255, 255, 0);
+    
+    .logo-with-period {
+      opacity: 0;
+    }
   }
 
-  a, a:visited, a:active {
-    color: $purple;
-    display: inline-block;
-    text-decoration: none;
-  }
-}
+  &.mainNavigation--unCollapsed {
+    background: rgba(255, 255, 255, 1);
 
-.mainNavigation--miniLogo {
-  background: rgba(255, 255, 255, 0);
-  
-  .logotype {
-    opacity: 0;
-  }
-}
-
-.mainNavigation--unCollapsed {
-  background: rgba(255, 255, 255, 1);
-
-  .mainNavigation-sections {
-    display: block;
+    .mainNavigation-sections {
+      display: block;
+    }
   }
 }
 
@@ -44,34 +33,54 @@
   font-family: $header-font;
   font-size: 2rem;
   font-weight: 800;
+  position: relative;
 
-  svg {
-    display: inline-block;
-    fill: $purple;
-    height: 1rem;
-    padding: 0 .5rem 0 1.25rem;
-    @include position(relative, -.2rem null null null);
+  .logo-with-period {
+    height: $header-inner-height;
+    opacity: 1;
+    padding: .6rem 0;
+    @include shift(2);
+    @include transition(.2s);
+    vertical-align: bottom;
 
     @include if_narrower_than($navigation-collapse-breakpoint) {
-      padding-left: 0;
-      padding-right: .25rem;
+      margin-left: 3rem;
+    }
+
+    path {
+      fill: $purple;
+    }
+  }
+
+  .swash {
+    fill: $purple;
+    height: 1rem;
+    @include position(absolute, null null .6rem 1.25rem);
+
+    @include if_narrower_than($navigation-collapse-breakpoint) {
+      left: 0;
     }
   }
 }
 
 .mainNavigation-menuExpander {
   cursor: pointer;
-  float: right;
-  padding: 15px 15px 0;
-  @include position(relative, null -15px null null);
+  height: $header-inner-height;
+  min-width: 36px;
+  position: relative;
+
+  @include direction-context(right-to-left) {
+    @include span-columns(2);
+  }
 
   @include if_wider_than($navigation-collapse-breakpoint) {
     display: none;
   }
 
-  svg {
+  .menuExpander {
     fill: $purple;
     height: 1rem;
+    @include position(absolute, null 0px .6rem null);
   }
 }
 
@@ -91,18 +100,37 @@
 }
 
 .mainNavigation-sections-link {
+  display: inline-block;
   outline: none;
   padding: 1rem 1rem .4rem;
+  position: relative;
+  text-decoration: none;
 
-  &:hover {
-    border-bottom: 1px solid $purple;
+  &::after {
+    border-bottom: 1px solid transparent;
+    content: '';
+    @include position(absolute, null 0px -1px 0px);
+    width: 100%;
+  }
+
+  &, &:visited, &:active {
+    color: $purple;
+  }
+
+  &:hover::after {
+    border-bottom-color: $purple;
   }
 
   @include if_narrower_than($navigation-collapse-breakpoint) {
-    border-bottom: 1px solid $purple;
     padding: .6rem 0;
     width: 100%;
 
-    &:last-of-type, &:last-of-type:hover { border-bottom: 0 }
+    &::after {
+      border-bottom-color: $purple;
+    }
+
+    &:last-of-type::after, &:last-of-type:hover::after {
+      border-bottom: 0;
+    }
   }
 }
