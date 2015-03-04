@@ -1,1 +1,1 @@
-(function(){$(function(){var i;if($("body").hasClass("index"))return $(".mainNavigation").addClass("mainNavigation--miniLogo"),i=$(".mainNavigation").height()+"px",$(".hero-headline").waypoint(function(){return $(".mainNavigation").toggleClass("mainNavigation--miniLogo")},{offset:i})})}).call(this);
+(function(){$(function(){return $("body").hasClass("index")?$(".hero-headline").waypoint(function(){return $(".mainNavigation").toggleClass("mainNavigation--miniLogo")},{offset:$(".mainNavigation").height()+"px"}):void 0})}).call(this);
