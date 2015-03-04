@@ -93,9 +93,7 @@
 
   @include if_narrower_than($navigation-collapse-breakpoint) {
     display: none;
-    
-    // need more specificity to override utility function
-    .mainNavigation & { float: none; }
+    float: none;
   }
 }
 

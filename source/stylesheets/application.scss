@@ -10,6 +10,9 @@
 @import 'fonts';
 @import 'base';
 
+// utility classes
+@import 'u';
+
 // components
 @import 'mainContainer';
 @import 'mainNavigation';
@@ -22,6 +25,3 @@
 
 // page specific
 @import 'index';
-
-// utilities — include last
-@import 'u';
