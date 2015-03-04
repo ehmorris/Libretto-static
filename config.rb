@@ -1,5 +1,6 @@
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
+set :relative_links, true
 
 configure :build do
   activate :minify_css
