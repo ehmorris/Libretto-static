@@ -15,7 +15,7 @@
   &.mainNavigation--miniLogo {
     background: rgba(255, 255, 255, 0);
     
-    .logo-with-period {
+    .logoWithPeriod {
       opacity: 0;
     }
   }
@@ -30,12 +30,9 @@
 }
 
 .mainNavigation-logo {
-  font-family: $header-font;
-  font-size: 2rem;
-  font-weight: 800;
   position: relative;
 
-  .logo-with-period {
+  .logoWithPeriod {
     height: $header-inner-height;
     opacity: 1;
     padding: .6rem 0;
@@ -46,14 +43,9 @@
     @include if_narrower_than($navigation-collapse-breakpoint) {
       margin-left: 3rem;
     }
-
-    path {
-      fill: $purple;
-    }
   }
 
   .swash {
-    fill: $purple;
     height: 1rem;
     @include position(absolute, null null .6rem 1.25rem);
 
