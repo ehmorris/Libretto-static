@@ -1,4 +1,11 @@
 .index {
+  .hero-headline {
+    .logoWithoutPeriod {
+      height: 2.8rem;
+      padding-top: .75rem;
+    }
+  }
+
   .services {
     position: relative;
 
@@ -18,9 +25,5 @@
 
   .additional {
     overflow: auto;
-  }
-
-  .mantra {
-    overflow: hidden;
   }
 }
