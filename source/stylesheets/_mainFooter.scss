@@ -37,7 +37,6 @@
 
 .mainFooter-contact {
   @include if_wider_than($two-column-breakpoint) {
-    float: right;
     @include span-columns(7);
   }
 
