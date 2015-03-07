@@ -30,13 +30,19 @@
 }
 
 .mainNavigation-logo {
+  display: inline-block;
+  margin-top: .6rem;
   position: relative;
 
+  @include if_wider_than($navigation-collapse-breakpoint) {
+    @include span-columns(6);
+  }
+
   .logoWithPeriod {
-    height: $header-inner-height;
+    height: calc(#{$header-inner-height} - .6rem);
     opacity: 1;
-    padding: .6rem 0;
-    @include shift(2);
+    padding: 0 0 .6rem;
+    @include shift(2 of 6);
     @include transition(.2s);
     vertical-align: bottom;
 
@@ -47,7 +53,7 @@
 
   .swash {
     height: 1rem;
-    @include position(absolute, null null .6rem 1.25rem);
+    @include position(absolute, null null .7rem 1.25rem);
 
     @include if_narrower_than($navigation-collapse-breakpoint) {
       left: 0;
@@ -72,7 +78,7 @@
   .menuExpander {
     fill: $purple;
     height: 1rem;
-    @include position(absolute, null 0px .6rem null);
+    @include position(absolute, null 0px .7rem null);
   }
 }
 

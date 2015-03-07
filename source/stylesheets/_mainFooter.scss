@@ -9,6 +9,8 @@
 }
 
 .mainFooter-logo {
+  margin-top: .6rem;
+
   @include if_wider_than($two-column-breakpoint) {
     @include shift(2);
     @include span-columns(14);
@@ -19,9 +21,8 @@
   }
 
   .logoWithPeriod {
-    height: $header-inner-height;
+    height: calc(#{$header-inner-height} - 1.2rem);
     opacity: 1;
-    padding: .6rem 0;
 
     path {
       fill: #fff;
@@ -29,7 +30,7 @@
   }
 
   p {
-    margin: 0;
+    margin: .45rem 0 0;
   }
 
   span:not(:last-child)::after {

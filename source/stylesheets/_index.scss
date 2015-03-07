@@ -1,12 +1,10 @@
 .index {
   .hero-headline {
     .logoWithoutPeriod {
-      height: 2.8rem;
-      padding-top: .75rem;
+      height: 2.05rem;
 
       @include if_narrower_than($headline-collapse-breakpoint) {
-        height: 2rem;
-        padding-top: .5rem;
+        height: 1.5rem;
       }    
     }
   }
