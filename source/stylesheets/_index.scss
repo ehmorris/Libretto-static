@@ -3,6 +3,11 @@
     .logoWithoutPeriod {
       height: 2.8rem;
       padding-top: .75rem;
+
+      @include if_narrower_than($headline-collapse-breakpoint) {
+        height: 2rem;
+        padding-top: .5rem;
+      }    
     }
   }
 
