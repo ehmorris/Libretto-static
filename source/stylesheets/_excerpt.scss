@@ -36,18 +36,6 @@
   }
 }
 
-.excerpt-fullLink {
-  color: inherit;
-  display: block;
-  outline: none;
-
-  .no-touch & {
-    &:hover .headerGroup-mainhead {
-      border-color: $gray;
-    }
-  }
-}
-
 .excerpt-author {
   color: $light-gray;
   display: block;

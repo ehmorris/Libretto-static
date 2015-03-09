@@ -1,0 +1,66 @@
+.workPreview {
+  background: $lightest-gray;
+  margin-bottom: 4rem;
+  position: relative;
+  @include span-columns(11);
+  text-align: center;
+
+  @include if_narrower_than($three-column-breakpoint) {
+    @include fill-parent();
+  }
+
+  @include if_wider_than($two-column-breakpoint) {
+    height: 280px;
+  }
+
+  @include if_narrower_than($two-column-breakpoint) {
+    padding: 3rem 0 0;
+  }
+
+  @include if_wider_than($three-column-breakpoint) {
+    &:not(.workPreview--fullWidth):nth-child(even) {
+      @include shift(1);
+    }
+  }
+
+  .u-fullLink {
+    @include if_wider_than($two-column-breakpoint) {
+      @include align-items(flex-end);
+      @include display(flex);
+      @include flex-wrap(wrap);
+    }
+  }
+
+  .u-boxLabel {
+    @include if_wider_than($two-column-breakpoint) {
+      margin: 0 auto;
+    }
+  }
+}
+
+.workPreview--fullWidth {
+  @include fill-parent();
+  clear: both;
+}
+
+.workPreview-image {
+  border-radius: 50%;
+  @include position(absolute, -35px null null calc(50% - 35px));
+  width: 70px;
+}
+
+.workPreview-header {
+  color: $purple;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0 auto;
+  max-width: 90%;
+
+  @include if_narrower_than($two-column-breakpoint) {
+    font-size: 1.8rem;
+  }  
+
+  .workPreview--fullWidth & {
+    max-width: 75%;
+  }
+}

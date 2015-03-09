@@ -37,6 +37,10 @@
     content: '';
     display: block;
   }
+
+  .no-touch .u-fullLink:hover & {
+    border-color: $gray;
+  }
 }
 
 .headerGroup-subhead {
