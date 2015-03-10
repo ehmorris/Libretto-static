@@ -23,7 +23,7 @@
     }
   }
 
-  &:hover {
+  .no-touch &:hover {
     background: $purple;
   }
 
@@ -64,7 +64,7 @@
     font-size: 1.8rem;
   }
 
-  .workPreview:hover & {
+  .no-touch .workPreview:hover & {
     color: #fff;
   }
 
