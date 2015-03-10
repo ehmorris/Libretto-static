@@ -23,6 +23,10 @@
     }
   }
 
+  &:hover {
+    background: $purple;
+  }
+
   .u-fullLink {
     @include if_wider_than($two-column-breakpoint) {
       @include align-items(flex-end);
@@ -58,7 +62,11 @@
 
   @include if_narrower_than($two-column-breakpoint) {
     font-size: 1.8rem;
-  }  
+  }
+
+  .workPreview:hover & {
+    color: #fff;
+  }
 
   .workPreview--fullWidth & {
     max-width: 75%;
