@@ -1,0 +1,57 @@
+.overlay {
+  background: rgba(58, 58, 58, .85);
+  display: none;
+  overflow-y: scroll;
+  @include position(fixed, 0px 0px 0px 0px);
+  -webkit-overflow-scroll: touch;
+  z-index: 1;
+
+  &.visible {
+    display: block;
+  }
+}
+
+.overlay-gridContainer {
+  min-width: 290px;
+  @include outer-container;
+  padding: 8rem $overflow-width;
+}
+
+.overlay-lightbox {
+  background: #fff;
+  @include shift(1);
+  @include span-columns(21);
+}
+
+.overlay-lightbox-header {
+  background: $purple;
+  color: #fff;
+  overflow: auto;
+  padding: 1.8rem 0;
+  position: relative;
+
+  h2 {
+    margin: 0;
+    @include shift(2 of 21);
+  }
+}
+
+.overlay-dismiss {
+  cursor: pointer;
+  height: 35px;
+  @include position(absolute, 28px 0px null null);
+  @include direction-context(right-to-left) {
+    @include shift(1 of 21);
+  }
+
+  line {
+    stroke: rgba(255, 255, 255, .7);
+    stroke-width: 1px;
+  }
+}
+
+.overlay-content {
+  padding: 1rem 0;
+  @include shift(2 of 21);
+  @include span-columns(18 of 21);
+}

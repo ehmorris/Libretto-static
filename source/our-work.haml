@@ -24,10 +24,47 @@
 .industries
   %h2 We work in a wide variety of industries
   %ul.arrowList
-    %li Education
-    %li Financial Services
-    %li Healthcare and Pharmaceuticals
-    %li Non Profit
-    %li Real Estate, Architecture and Design
-    %li Services
-    %li Technology
+    %li=link_to 'Education', '#', 'data-overlay-target' => 'education'
+    %li=link_to 'Financial Services', '#'
+    %li=link_to 'Healthcare and Pharmaceuticals', '#'
+    %li=link_to 'Non Profit', '#'
+    %li=link_to 'Real Estate, Architecture and Design', '#'
+    %li=link_to 'Services', '#'
+    %li=link_to 'Technology', '#'
+
+.overlay{ 'data-overlay-name' => 'education' }
+  .overlay-gridContainer
+    .overlay-lightbox
+      %header.overlay-lightbox-header
+        %h2 Education Clients
+        = partial 'assets/overlay-dismiss-svg'
+      .overlay-content
+        %ul.flatList.flatList--twoColumns
+          %li Art Institute of Boston
+          %li Assumption College
+          %li Beaver Country Day School 
+          %li=link_to 'Berklee College of Music', '#'
+          %li Bucknell University
+          %li Cambridge College
+          %li Cambridge School of Weston
+          %li College of Mount St. Vincent
+          %li Clark University Graduate School of Management
+          %li Dana Hall School
+          %li Emerson College 
+          %li Hackley School
+          %li Harvard Alumni Association
+          %li Harvard Business School
+          %li Manhattanville College
+          %li Meritas Schools
+          %li=link_to 'MIT', '#'
+          %li MIT CSAIL
+          %li MIT Sloan School of Management
+          %li MIT BioImaging Center
+          %li Pace Law School
+          %li Rensselaer
+          %li The Summit Country Day School
+          %li Susquehanna University
+          %li Tufts University School of Dental Medicine 
+          %li Wellesley College
+          %li Weston Jesuit School of Theology
+          %li World Learning
