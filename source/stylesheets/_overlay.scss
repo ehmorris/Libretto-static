@@ -12,15 +12,25 @@
 }
 
 .overlay-gridContainer {
-  min-width: 290px;
-  @include outer-container;
-  padding: 8rem $overflow-width;
+  @include if_wider_than($overlay-breakpoint) {
+    min-width: 290px;
+    @include outer-container;
+    padding: 8rem $overflow-width;
+  }
+
+  @include if_narrower_than($overlay-breakpoint) {
+    padding: 1rem 1rem 50vh;
+  }
 }
 
 .overlay-lightbox {
   background: #fff;
-  @include shift(1);
-  @include span-columns(21);
+  overflow: auto;
+
+  @include if_wider_than($overlay-breakpoint) {
+    @include shift(1);
+    @include span-columns(21);
+  }
 }
 
 .overlay-lightbox-header {
@@ -33,6 +43,10 @@
   h2 {
     margin: 0;
     @include shift(2 of 21);
+
+    @include if_narrower_than($overlay-breakpoint) {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -42,6 +56,10 @@
   @include position(absolute, 28px 0px null null);
   @include direction-context(right-to-left) {
     @include shift(1 of 21);
+  }
+
+  @include if_narrower_than($overlay-breakpoint) {
+    top: 22px;
   }
 
   line {

@@ -16,5 +16,7 @@
 }
 
 .flatList--twoColumns {
-  @include columns(2);
+  @include if_wider_than($two-column-breakpoint) {
+    @include columns(2);
+  }
 }

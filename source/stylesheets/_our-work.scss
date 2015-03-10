@@ -13,7 +13,6 @@
   }
 
   .arrowList {
-
     @include if_wider_than($two-column-breakpoint) {
       @include columns(2);
       font-size: 1.2rem;
@@ -23,6 +22,8 @@
     }
 
     li {
+      margin-top: 1rem;
+
       @include if_wider_than($two-column-breakpoint) {
         display: inline-block;
         margin: 1rem 0 0 2rem;
