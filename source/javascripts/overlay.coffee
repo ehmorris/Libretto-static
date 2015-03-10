@@ -1,6 +1,6 @@
 $ ->
   $('[data-overlay-target]').on 'click', ->
-    $("[data-overlay-name=#{$(this).attr('data-overlay-target')}").toggleClass('visible')
+    $("[data-overlay-name=#{$(this).attr('data-overlay-target')}]").toggleClass('visible')
     $('body').toggleClass('u-noScroll')
     false
 
