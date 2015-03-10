@@ -3,7 +3,7 @@
   display: none;
   overflow-y: scroll;
   @include position(fixed, 0px 0px 0px 0px);
-  -webkit-overflow-scroll: touch;
+  -webkit-overflow-scrolling: touch;
   z-index: 1;
 
   &.visible {
