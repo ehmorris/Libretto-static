@@ -1,0 +1,53 @@
+.workDetail-article {
+  @include shift(1);
+  @include span-columns(14);
+}
+
+.workDetail-article-emphasize {
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+.workDetail-margin {
+  background: $gray;
+  color: #fff;
+  @include shift(1);
+  @include span-columns(6);
+}
+
+.workDetail-media {
+  clear: both;
+  margin: 4rem 0;
+  overflow: auto;
+
+  img {
+    @include span-columns(11);
+
+    &:nth-child(even) {
+      @include shift(1);
+    }
+  }
+}
+
+.workDetail-navigation {
+  clear: both;
+  overflow: auto;
+}
+
+.workDetail-navigation-previous, .workDetail-navigation-next {
+  color: inherit;
+}
+
+.workDetail-navigation-previous {
+  float: left;
+  @include prepend-backwards-libretto-arrow;
+  @include shift(2);
+}
+
+.workDetail-navigation-next {
+  @include append-libretto-arrow;
+  float: right;
+  @include direction-context(right-to-left) {
+    @include shift(2);
+  }
+}

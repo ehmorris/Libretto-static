@@ -16,7 +16,15 @@
 @mixin prepend-libretto-arrow {
   &::before {
     color: $blue;
-    content: ' –\00BB';
+    content: '–\00BB ';
+    @content;
+  }
+}
+
+@mixin prepend-backwards-libretto-arrow {
+  &::before {
+    color: $blue;
+    content: '\00AB– ';
     @content;
   }
 }
