@@ -4,19 +4,19 @@
 
 - 3.times do
   .workPreview
-    = link_to '#', class: 'u-fullLink' do
+    = link_to 'work-detail.html', class: 'u-fullLink' do
       = image_tag 'http://placehold.it/200x200', class: 'workPreview-image'
       %h2.workPreview-header A theme that journeyed into space.
       %span.u-boxLabel MIT 150: Inventional Wisdom
 
 .workPreview
-  = link_to '#', class: 'u-fullLink' do
+  = link_to 'work-detail.html', class: 'u-fullLink' do
     = image_tag 'http://placehold.it/200x200', class: 'workPreview-image'
     %h2.workPreview-header Sounds like groundbreaking — and it is.
     %span.u-boxLabel Berklee College of Music
 
 .workPreview.workPreview--fullWidth
-  = link_to '#', class: 'u-fullLink' do
+  = link_to 'work-detail.html', class: 'u-fullLink' do
     = image_tag 'http://placehold.it/200x200', class: 'workPreview-image'
     %h2.workPreview-header The analytical elegance perseverance curiosity factor.
     %span.u-boxLabel MIT: The Human Factor
@@ -25,12 +25,12 @@
   %h2 We work in a wide variety of industries
   %ul.arrowList
     %li=link_to 'Education', '#', 'data-overlay-target' => 'education'
-    %li=link_to 'Financial Services', '#'
-    %li=link_to 'Healthcare and Pharmaceuticals', '#'
-    %li=link_to 'Non Profit', '#'
-    %li=link_to 'Real Estate, Architecture and Design', '#'
-    %li=link_to 'Services', '#'
-    %li=link_to 'Technology', '#'
+    %li=link_to 'Financial Services', '#', 'data-overlay-target' => 'education'
+    %li=link_to 'Healthcare and Pharmaceuticals', '#', 'data-overlay-target' => 'education'
+    %li=link_to 'Non Profit', '#', 'data-overlay-target' => 'education'
+    %li=link_to 'Real Estate, Architecture and Design', '#', 'data-overlay-target' => 'education'
+    %li=link_to 'Services', '#', 'data-overlay-target' => 'education'
+    %li=link_to 'Technology', '#', 'data-overlay-target' => 'education'
 
 .overlay{ 'data-overlay-name' => 'education' }
   .overlay-gridContainer
@@ -43,7 +43,7 @@
           %li Art Institute of Boston
           %li Assumption College
           %li Beaver Country Day School 
-          %li=link_to 'Berklee College of Music', '#'
+          %li=link_to 'Berklee College of Music', 'work-detail.html'
           %li Bucknell University
           %li Cambridge College
           %li Cambridge School of Weston
@@ -56,7 +56,7 @@
           %li Harvard Business School
           %li Manhattanville College
           %li Meritas Schools
-          %li=link_to 'MIT', '#'
+          %li=link_to 'MIT', 'work-detail.html'
           %li MIT CSAIL
           %li MIT Sloan School of Management
           %li MIT BioImaging Center
