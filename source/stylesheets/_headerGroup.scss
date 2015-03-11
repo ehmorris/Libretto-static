@@ -1,32 +1,32 @@
 .headerGroup {
-  margin: 2rem 0 1rem;
-}
-
-.headerGroup--small {
-  clear: both;
-  padding-top: 2.5rem;
-}
-
-.headerGroup-prehead {
-  color: $blue;
-}
-
-.headerGroup-mainhead,
-.headerGroup-subhead {
   font-size: 2.3rem;
-  margin: 0;
+  line-height: 1;
+  margin: 2rem 0 1rem;
 
   @include if_narrower_than($headline-collapse-breakpoint) {
     font-size: 2rem;
   }
+}
 
-  .headerGroup--small & {
-    font-size: 2rem;
+.headerGroup--small {
+  clear: both;
+  font-size: 2rem;
+  padding-top: 2.5rem;
 
-    @include if_narrower_than($headline-collapse-breakpoint) {
-      font-size: 1.5rem;
-    }
+  @include if_narrower_than($headline-collapse-breakpoint) {
+    font-size: 1.5rem;
   }
+}
+
+.headerGroup-prehead {
+  color: $blue;
+  font-size: 1rem;
+}
+
+.headerGroup-mainhead,
+.headerGroup-subhead {
+  font-size: inherit;
+  margin: 0;
 }
 
 .headerGroup-mainhead {
@@ -44,7 +44,10 @@
 }
 
 .headerGroup-subhead {
-  @include append-libretto-arrow;
   font-family: $body-font;
   font-weight: 400;
+}
+
+.headerGroup-subhead--arrow {
+  @include append-libretto-arrow;
 }
