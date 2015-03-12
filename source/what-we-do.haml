@@ -1,3 +1,27 @@
-%section.hero.hero--largeMargin
+%section.hero.hero--smallMargin
   %h1.hero-headline
     %strong.u-purple What We Do
+
+.tabs
+  %nav.tabs-navigation
+    = link_to '#', 'data-tab-target' => 'messaging' do
+      %span Communications Strategy:
+      %span The Bigger Picture
+    = link_to '#', 'data-tab-target' => 'messaging' do
+      %span Messaging:
+      %span A Solid Foundation
+    = link_to '#', 'data-tab-target' => 'messaging' do
+      %span Names and Themes:
+      %span Distilling the Essence
+    = link_to '#', 'data-tab-target' => 'messaging' do
+      %span Content Development:
+      %span Ideas in Action
+  .tabs-contents
+    .tabs-contents.content{ 'data-tab-name' => 'messaging' }
+      %p “Messaging” is a term that’s often misunderstood. For us, it’s about helping clients achieve internal alignment around their beliefs and priorities, and then creating a platform they can use to share their story in presentations, online, and in print.
+      %p From elevator pitches and brand pillars to targeted messages for key audiences, Libretto has completed dozens of successful messaging engagements for prestigious institutions and private-sector organizations. We have a well-deserved reputation for delivering robust, elegantly crafted messaging guides that help clients speak with a clear, differentiated, and unified voice. These guides form the basis for the public-facing communications that they (or we) go on to develop.
+
+.workPreview.workPreview--fullWidth
+  = link_to 'work-detail.html', class: 'u-fullLink' do
+    %h2.workPreview-header Sounds like groundbreaking — and it is.
+    %span.u-boxLabel Berklee College of Music
