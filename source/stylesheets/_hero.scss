@@ -24,6 +24,16 @@
   }
 }
 
+.hero--smallMargin {
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+
+  @include if_narrower_than($headline-collapse-breakpoint) {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
 .hero-headline {
   font-size: 2.8rem;
   font-weight: 400;
