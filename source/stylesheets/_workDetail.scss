@@ -3,8 +3,20 @@
 }
 
 .workDetail-article-content {
-  @include shift(1);
-  @include span-columns(14);
+  @include if_wider_than($three-column-breakpoint) {
+    @include span-columns(14);
+    @include shift(1);
+  }
+
+  @include if_wider_than_and_narrower_than($two-column-breakpoint, $three-column-breakpoint) {
+    @include span-columns(21);
+    @include shift(1);
+    float: none;
+  }
+
+  @include if_narrower_than($two-column-breakpoint) {
+    @include fill-parent();
+  }
 
   p:last-of-type {
     margin-bottom: 0;
@@ -20,19 +32,31 @@
   background: $gray;
   color: #fff;
   padding: 1rem 0 2.5rem;
-  @include shift(1);
-  @include span-columns(6);
 
-  .workDetail-article-margin-title {
-    color: $blue;
-    font-size: 1rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
+  @include if_wider_than($three-column-breakpoint) {
+    @include shift(1);
+    @include span-columns(6);
+
+    > * {
+      @include shift(1 of 6);
+    }
   }
 
-  > * {
-    @include shift(1 of 6);
+  @include if_narrower_than($three-column-breakpoint) {
+    clear: both;
+    margin: 2rem 0 0;
+
+    > * {
+      @include shift(1);
+    }
   }
+}
+
+.workDetail-article-margin-title {
+  color: $blue;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 .workDetail-media {
@@ -41,10 +65,21 @@
   overflow: auto;
 
   img {
-    @include span-columns(11);
+    @include if_wider_than($two-column-breakpoint) {
+      @include span-columns(11);
 
-    &:nth-child(even) {
-      @include shift(1);
+      &:nth-child(even) {
+        @include shift(1);
+      }
+    }
+
+    @include if_narrower_than($two-column-breakpoint) {
+      @include fill-parent();
+      display: block;
+
+      &:not(:last-of-type) {
+        margin-bottom: 2rem;
+      }
     }
   }
 }
@@ -61,13 +96,19 @@
 .workDetail-navigation-previous {
   float: left;
   @include prepend-backwards-libretto-arrow;
-  @include shift(2);
+
+  @include if_wider_than(350px) {
+    @include shift(2);
+  }
 }
 
 .workDetail-navigation-next {
   @include append-libretto-arrow;
   float: right;
-  @include direction-context(right-to-left) {
-    @include shift(2);
+
+  @include if_wider_than(350px) {
+    @include direction-context(right-to-left) {
+      @include shift(2);
+    }
   }
 }
