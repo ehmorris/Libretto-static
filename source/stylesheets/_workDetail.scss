@@ -1,6 +1,14 @@
 .workDetail-article {
+  overflow: auto;
+}
+
+.workDetail-article-content {
   @include shift(1);
   @include span-columns(14);
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .workDetail-article-emphasize {
@@ -8,11 +16,23 @@
   font-style: italic;
 }
 
-.workDetail-margin {
+.workDetail-article-margin {
   background: $gray;
   color: #fff;
+  padding: 1rem 0 2.5rem;
   @include shift(1);
   @include span-columns(6);
+
+  .workDetail-article-margin-title {
+    color: $blue;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  > * {
+    @include shift(1 of 6);
+  }
 }
 
 .workDetail-media {
