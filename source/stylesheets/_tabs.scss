@@ -3,7 +3,13 @@
 }
 
 .tabs-navigation {
-  @include display(flex);
+  @include if_wider_than($three-column-breakpoint) {
+    @include display(flex);
+  }
+
+  @include if_narrower_than($three-column-breakpoint) {
+    display: none;
+  }
 }
 
 .tabs-navigation-link {
@@ -15,7 +21,7 @@
   padding: 2.5rem 1.5rem;
   position: relative;
 
-  &:hover {
+  .no-touch &:not(.active):hover {
     background: transparentize($purple, .75);
   }
 
@@ -32,14 +38,16 @@
       width: 18px;
     }
   }
+}
 
+.tabs-section-header {
   span {
     display: block;
+  }
 
-    &:first-child {
-      font-family: $header-font;
-      font-weight: bold;
-    }
+  :first-child {
+    font-family: $header-font;
+    font-weight: bold;
   }
 }
 
@@ -48,12 +56,30 @@
 }
 
 .tabs-content {
-  @include shift(3);
-  @include span-columns(17);
-  display: none;
   padding: 2rem 0 0;
+
+  @include if_narrower_than($three-column-breakpoint) {
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  @include if_wider_than($three-column-breakpoint) {
+    @include shift(3);
+    @include span-columns(17);
+    display: none;
+  }
 
   &.visible {
     display: block;
+  }
+
+  .tabs-section-header {
+    color: $purple;
+    display: none;
+
+    @include if_narrower_than($three-column-breakpoint) {
+      display: block;
+    }
   }
 }

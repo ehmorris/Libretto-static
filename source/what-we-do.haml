@@ -5,23 +5,34 @@
 .tabs
   %nav.tabs-navigation
     = link_to '#', class: 'tabs-navigation-link', 'data-tab-target' => 'messaging' do
-      %span Communications Strategy:
-      %span The Bigger Picture
+      .tabs-section-header
+        %span Communications Strategy:
+        %span The Bigger Picture
     = link_to '#', class: 'tabs-navigation-link', 'data-tab-target' => 'content-development' do
-      %span Messaging:
-      %span A Solid Foundation
+      .tabs-section-header
+        %span Messaging:
+        %span A Solid Foundation
     = link_to '#', class: 'tabs-navigation-link', 'data-tab-target' => 'messaging' do
-      %span Names and Themes:
-      %span Distilling the Essence
+      .tabs-section-header
+        %span Names and Themes:
+        %span Distilling the Essence
     = link_to '#', class: 'tabs-navigation-link', 'data-tab-target' => 'content-development' do
-      %span Content Development:
-      %span Ideas in Action
+      .tabs-section-header
+        %span Content Development:
+        %span Ideas in Action
+
   .tabs-contents
     .tabs-content.longform{ 'data-tab-name' => 'messaging' }
+      .tabs-section-header
+        %span Messaging:
+        %span A Solid Foundation
       %p.longform-emphasize “Messaging” is a term that’s often misunderstood. For us, it’s about helping clients achieve internal alignment around their beliefs and priorities, and then creating a platform they can use to share their story in presentations, online, and in print.
       %p From elevator pitches and brand pillars to targeted messages for key audiences, Libretto has completed dozens of successful messaging engagements for prestigious institutions and private-sector organizations. We have a well-deserved reputation for delivering robust, elegantly crafted messaging guides that help clients speak with a clear, differentiated, and unified voice. These guides form the basis for the public-facing communications that they (or we) go on to develop.
 
     .tabs-content.longform{ 'data-tab-name' => 'content-development' }
+      .tabs-section-header
+        %span Content Development:
+        %span Ideas in Action
       %p “Content Development” is a term that’s often misunderstood. For us, it’s about proin et viverra neque. Sed ac magna non sem imperdiet pharetra.
       %p.longform-emphasize Vestibulum rutrum leo ac tellus fermentum tempor. Aenean eu metus enim. Nam nec sagittis dolor. Duis purus mi, aliquet ac iaculis quis, lacinia faucibus diam. Aliquam erat volutpat. Sed sit amet consequat ante. Proin et viverra neque. Sed ac magna non sem imperdiet pharetra.
       %p Vestibulum rutrum leo ac tellus fermentum tempor. Aenean eu metus enim. Nam nec sagittis dolor. Duis purus mi, aliquet ac iaculis quis, lacinia faucibus diam. Aliquam erat volutpat. Sed sit amet consequat ante. Proin et viverra neque. Sed ac magna non sem imperdiet pharetra.
