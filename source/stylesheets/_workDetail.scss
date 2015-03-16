@@ -64,11 +64,17 @@
   margin: 4rem 0;
   overflow: auto;
 
-  img {
-    @include if_wider_than($two-column-breakpoint) {
-      @include span-columns(11);
+  @include if_wider_than($two-column-breakpoint) {
+    @include display(flex);
+  }
 
-      &:nth-child(even) {
+  figure {
+    margin: 0;
+
+    @include if_wider_than($two-column-breakpoint) {
+      @include flex(1);
+
+      &:not(:first-child) {
         @include shift(1);
       }
     }
@@ -81,6 +87,11 @@
         margin-bottom: 2rem;
       }
     }
+  }
+
+  img {
+    display: block;
+    width: 100%;
   }
 }
 
