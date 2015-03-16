@@ -1,0 +1,59 @@
+.tabs {
+  margin: 4rem 0;
+}
+
+.tabs-navigation {
+  @include display(flex);
+}
+
+.tabs-navigation-link {
+  background: $lightest-gray;
+  color: $gray;
+  display: block;
+  @include flex(1);
+  font-size: 1.2rem;
+  padding: 2.5rem 1.5rem;
+  position: relative;
+
+  &:hover {
+    background: transparentize($purple, .75);
+  }
+
+  &.active {
+    background: $purple;
+    color: #fff;
+
+    &::after {
+      background: $purple;
+      content: '';
+      height: 18px;
+      @include position(absolute, null null -9px calc(50% - 9px));
+      @include transform(rotate(45deg));
+      width: 18px;
+    }
+  }
+
+  span {
+    display: block;
+
+    &:first-child {
+      font-family: $header-font;
+      font-weight: bold;
+    }
+  }
+}
+
+.tabs-contents {
+  overflow: auto;
+}
+
+.tabs-content {
+  @include shift(3);
+  @include span-columns(17);
+  display: none;
+  padding: 2rem 0 0;
+
+  &.visible {
+    display: block;
+  }
+}

@@ -1,0 +1,13 @@
+.longform {
+  font-size: 1.125rem;
+  line-height: 1.5;
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.longform-emphasize {
+  font-size: 1.75rem;
+  font-style: italic;
+}

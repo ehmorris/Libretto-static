@@ -17,15 +17,6 @@
   @include if_narrower_than($two-column-breakpoint) {
     @include fill-parent();
   }
-
-  p:last-of-type {
-    margin-bottom: 0;
-  }
-}
-
-.workDetail-article-emphasize {
-  font-size: 1.6rem;
-  font-style: italic;
 }
 
 .workDetail-article-margin {
