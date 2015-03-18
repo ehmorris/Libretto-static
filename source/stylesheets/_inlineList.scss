@@ -1,0 +1,18 @@
+.inlineList {
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    font: bold 1.3rem $header-font;
+    margin-bottom: 1rem;
+
+    @include if_narrower_than($two-column-breakpoint) {
+      font-size: 1rem;
+    }
+
+    &:not(:first-of-type) {
+      @include shift(3);
+    }
+  }
+}

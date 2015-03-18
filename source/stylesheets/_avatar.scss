@@ -1,0 +1,32 @@
+.avatar {
+  img {
+    border-radius: 50%;
+    display: block;
+    width: 100%;
+  }
+}
+
+.avatar--large {
+  text-align: center;
+
+  img {
+    margin-bottom: 1rem;
+  }
+
+  .avatar-position, .avatar-name {
+    display: block;
+  }
+}
+
+.avatar-position {
+  color: $blue;
+}
+
+.avatar-name {
+  font-size: 1.5rem;
+  margin: 0;
+
+  @include if_narrower_than($two-column-breakpoint) {
+    font-size: 1rem;
+  }
+}

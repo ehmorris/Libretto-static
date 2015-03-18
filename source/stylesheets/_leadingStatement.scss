@@ -1,0 +1,17 @@
+.leadingStatement {
+  margin: 0 0 4rem;
+
+  @include if_wider_than($two-column-breakpoint) {
+    @include shift(2);
+    @include span-columns(19);
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 0;
+
+    @include if_narrower_than($two-column-breakpoint) {
+      font-size: 1.5rem;
+    }   
+  }
+}
