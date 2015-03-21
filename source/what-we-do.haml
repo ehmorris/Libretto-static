@@ -8,15 +8,15 @@ title: 'What We Do'
 
 %section.tabs
   %nav.tabs-navigation
-    = link_to '#', class: 'tabs-navigation-link', 'data-tab-target' => 'messaging' do
+    = link_to '#', class: 'tabs-navigation-link', 'data-tab-target' => 'communications-strategy' do
       .tabs-section-header
         %span Communications Strategy:
         %span The Bigger Picture
-    = link_to '#', class: 'tabs-navigation-link', 'data-tab-target' => 'content-development' do
+    = link_to '#', class: 'tabs-navigation-link', 'data-tab-target' => 'messaging' do
       .tabs-section-header
         %span Messaging:
         %span A Solid Foundation
-    = link_to '#', class: 'tabs-navigation-link', 'data-tab-target' => 'messaging' do
+    = link_to '#', class: 'tabs-navigation-link', 'data-tab-target' => 'names-and-themes' do
       .tabs-section-header
         %span Names and Themes:
         %span Distilling the Essence
@@ -26,12 +26,24 @@ title: 'What We Do'
         %span Ideas in Action
 
   .tabs-contents
+    .tabs-content.longform{ 'data-tab-name' => 'communications-strategy' }
+      .tabs-section-header
+        %span Communications Strategy:
+        %span The Bigger Picture
+      %p Communications strategy.
+
     .tabs-content.longform{ 'data-tab-name' => 'messaging' }
       .tabs-section-header
         %span Messaging:
         %span A Solid Foundation
       %p.longform-emphasize “Messaging” is a term that’s often misunderstood. For us, it’s about helping clients achieve internal alignment around their beliefs and priorities, and then creating a platform they can use to share their story in presentations, online, and in print.
       %p From elevator pitches and brand pillars to targeted messages for key audiences, Libretto has completed dozens of successful messaging engagements for prestigious institutions and private-sector organizations. We have a well-deserved reputation for delivering robust, elegantly crafted messaging guides that help clients speak with a clear, differentiated, and unified voice. These guides form the basis for the public-facing communications that they (or we) go on to develop.
+
+    .tabs-content.longform{ 'data-tab-name' => 'names-and-themes' }
+      .tabs-section-header
+        %span Names and Themes:
+        %span Distilling the Essence
+      %p Names and themes.
 
     .tabs-content.longform{ 'data-tab-name' => 'content-development' }
       .tabs-section-header
