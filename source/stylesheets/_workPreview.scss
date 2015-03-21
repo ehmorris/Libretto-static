@@ -47,6 +47,11 @@
   clear: both;
 }
 
+.workPreview--borders {
+  border: 1px solid $border-gray;
+  border-width: 1px 0 1px;
+}
+
 .workPreview-image {
   border-radius: 50%;
   @include position(absolute, -35px null null calc(50% - 35px));
