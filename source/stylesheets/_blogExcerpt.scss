@@ -17,6 +17,10 @@
     @include shift(.5);
     @include span-columns(19);
   }
+
+  .u-fullLink p:last-of-type {
+    @include append-libretto-arrow;
+  }
 }
 
 .blogExcerpt-avatar {
@@ -34,6 +38,7 @@
 
 .blogExcerpt-date {
   font-style: italic;
+  margin: 0;
 
   a {
     font-style: normal;
