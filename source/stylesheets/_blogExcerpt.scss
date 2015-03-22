@@ -1,0 +1,28 @@
+.blogExcerpt {
+  margin-bottom: 4rem;
+  overflow: auto;
+
+  .headerGroup {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.blogExcerpt article {
+  @include shift(.5);
+  @include span-columns(19);
+}
+
+.blogExcerpt-avatar {
+  border-radius: 50%;
+  @include shift(.5);
+  @include span-columns(2);
+}
+
+.blogExcerpt-date {
+  font-style: italic;
+
+  a {
+    font-style: normal;
+  }
+}

@@ -85,32 +85,3 @@
     width: 100%;
   }
 }
-
-.workDetail-navigation {
-  clear: both;
-  overflow: auto;
-}
-
-.workDetail-navigation-previous, .workDetail-navigation-next {
-  color: inherit;
-}
-
-.workDetail-navigation-previous {
-  float: left;
-  @include prepend-backwards-libretto-arrow;
-
-  @include if_wider_than(350px) {
-    @include shift(2);
-  }
-}
-
-.workDetail-navigation-next {
-  @include append-libretto-arrow;
-  float: right;
-
-  @include if_wider_than(350px) {
-    @include direction-context(right-to-left) {
-      @include shift(2);
-    }
-  }
-}

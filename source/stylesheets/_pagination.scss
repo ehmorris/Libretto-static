@@ -1,0 +1,28 @@
+.pagination {
+  clear: both;
+  overflow: auto;
+}
+
+.pagination-previous, .pagination-next {
+  color: inherit;
+}
+
+.pagination-previous {
+  float: left;
+  @include prepend-backwards-libretto-arrow;
+
+  @include if_wider_than(350px) {
+    @include shift(2);
+  }
+}
+
+.pagination-next {
+  @include append-libretto-arrow;
+  float: right;
+
+  @include if_wider_than(350px) {
+    @include direction-context(right-to-left) {
+      @include shift(2);
+    }
+  }
+}
