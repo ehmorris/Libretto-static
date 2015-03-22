@@ -47,6 +47,12 @@
   }
 }
 
+.headerGroup-mainhead--arrow {
+  @include append-libretto-arrow {
+    display: inline; 
+  }
+}
+
 .headerGroup-subhead {
   font-family: $body-font;
   font-weight: 400;

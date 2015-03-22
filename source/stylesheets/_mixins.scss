@@ -5,9 +5,15 @@
   width: calc(100% + #{$overflow-width * 2});
 }
 
+@mixin libretto-arrow-base-styles {
+  color: $blue;
+  font-family: $body-font;
+  font-weight: normal;
+}
+
 @mixin append-libretto-arrow {
   &::after {
-    color: $blue;
+    @include libretto-arrow-base-styles;
     content: ' –\00BB';
     @content;
   }
@@ -15,7 +21,7 @@
 
 @mixin prepend-libretto-arrow {
   &::before {
-    color: $blue;
+    @include libretto-arrow-base-styles;
     content: '–\00BB ';
     @content;
   }
@@ -23,7 +29,7 @@
 
 @mixin prepend-backwards-libretto-arrow {
   &::before {
-    color: $blue;
+    @include libretto-arrow-base-styles;
     content: '\00AB– ';
     @content;
   }
