@@ -40,7 +40,7 @@
   }
 }
 
-.tabs-section-header {
+.tab-section-header {
   span {
     display: block;
   }
@@ -55,7 +55,8 @@
   overflow: auto;
 }
 
-.tabs-content {
+.tab-content {
+  overflow: auto;
   padding: 2rem 0 0;
 
   @include if_narrower_than($three-column-breakpoint) {
@@ -65,8 +66,6 @@
   }
 
   @include if_wider_than($three-column-breakpoint) {
-    @include shift(3);
-    @include span-columns(17);
     display: none;
   }
 
@@ -74,12 +73,55 @@
     display: block;
   }
 
-  .tabs-section-header {
+  .tab-section-header {
     color: $purple;
     display: none;
 
     @include if_narrower_than($three-column-breakpoint) {
       display: block;
+    }
+  }
+}
+
+.tab-article {
+  overflow: auto;
+
+  article {
+    @include if_wider_than($three-column-breakpoint) {
+      @include shift(3);
+      @include span-columns(17);
+    }
+  }
+}
+
+.tab-caseStudy {
+  clear: both;
+  margin-top: 4rem;
+
+  @include if_narrower_than($three-column-breakpoint) {
+    margin-top: 2rem;
+  }
+
+  @include if_wider_than($two-column-breakpoint) {
+    background: $lightest-gray;
+  }
+
+  a {
+    display: block;
+    overflow: auto;
+
+    @include if_wider_than($two-column-breakpoint) {
+      padding: 1rem 0 3rem;
+    }
+  }
+
+  .headerGroup {
+    margin: 0;
+    padding: 0;
+
+    @include if_wider_than($two-column-breakpoint) {
+      @include shift(1);
+      @include span-columns(21);
     }
   }
 }
