@@ -2,6 +2,10 @@
   margin-bottom: 4rem;
   overflow: auto;
 
+  @include if_narrower_than($two-column-breakpoint) {
+    margin-bottom: 2rem;
+  }
+
   .headerGroup {
     margin: 0;
     padding: 0;
@@ -9,14 +13,23 @@
 }
 
 .blogExcerpt article {
-  @include shift(.5);
-  @include span-columns(19);
+  @include if_wider_than($two-column-breakpoint) {
+    @include shift(.5);
+    @include span-columns(19);
+  }
 }
 
 .blogExcerpt-avatar {
   border-radius: 50%;
-  @include shift(.5);
-  @include span-columns(2);
+
+  @include if_wider_than($two-column-breakpoint) {
+    @include shift(.5);
+    @include span-columns(2);
+  }
+
+  @include if_narrower_than($two-column-breakpoint) {
+    display: none;
+  }  
 }
 
 .blogExcerpt-date {

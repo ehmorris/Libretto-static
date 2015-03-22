@@ -8,15 +8,16 @@ title: 'The Cobbler’s Children'
 
 - 10.times do
   .blogExcerpt
-    = image_tag 'http://placehold.it/200x200', class: 'blogExcerpt-avatar'
-    %article
-      .headerGroup.headerGroup--small
-        %span.headerGroup-prehead Neal Kane
-        %h2.headerGroup-mainhead Fifty Years On
-      %p Last Christmas I broke down and bought my partner a flat-screen TV for our house in the Berkshires. We decided to test its Web surfing features: the first thing we watched was a 1965 BBC recording of a concert by Peter, Paul, and Mary.
-      %p.blogExcerpt-date
-      December 28, 1014, File under
-      = link_to 'Background Materials', '#'
+    = link_to 'blog-entry.html', class: 'u-fullLink' do
+      = image_tag 'http://placehold.it/200x200', class: 'blogExcerpt-avatar'
+      %article
+        .headerGroup.headerGroup--small
+          %span.headerGroup-prehead Neal Kane
+          %h2.headerGroup-mainhead Fifty Years On
+        %p Last Christmas I broke down and bought my partner a flat-screen TV for our house in the Berkshires. We decided to test its Web surfing features: the first thing we watched was a 1965 BBC recording of a concert by Peter, Paul, and Mary.
+        %p.blogExcerpt-date
+        December 28, 1014, File under
+        = link_to 'Background Materials', '#'
 
 %nav.pagination
   = link_to 'Newer Articles', '#', class: 'pagination-previous'
