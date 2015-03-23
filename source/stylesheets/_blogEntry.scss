@@ -17,14 +17,18 @@
   overflow: auto;
 
   article {
-    @include shift(2);
-    @include span-columns(19);
+    @include if_wider_than($two-column-breakpoint) {
+      @include shift(2);
+      @include span-columns(19);
+    }
   }
 
   p, h1, h2, h3, h4, blockquote {
-    @include shift(1 of 19);
-    @include span-columns(17 of 19);
-    float: none;
+    @include if_wider_than($two-column-breakpoint) {
+      @include shift(1 of 19);
+      @include span-columns(17 of 19);
+      float: none;
+    }
   }
 
   p {

@@ -28,6 +28,7 @@
   font-family: $header-font;
   font-size: .8rem;
   font-weight: bold;
+  margin: 0;
   text-transform: uppercase;
 
   @include if_wider_than($two-column-breakpoint) {
