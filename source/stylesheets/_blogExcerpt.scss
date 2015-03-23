@@ -23,6 +23,18 @@
   }
 }
 
+.blogExcerpt-next {
+  color: $purple;
+  font-family: $header-font;
+  font-size: .8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @include if_wider_than($two-column-breakpoint) {
+    @include shift(3);
+  }
+}
+
 .blogExcerpt-avatar {
   border-radius: 50%;
 
