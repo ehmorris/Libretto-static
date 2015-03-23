@@ -1,0 +1,2 @@
+$ ->
+  $('.blogEntry').fitVids()
