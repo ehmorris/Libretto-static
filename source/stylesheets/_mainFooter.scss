@@ -57,6 +57,10 @@
   a {
     display: inline-block;
     margin-right: .5rem;
+
+    &:hover svg {
+      fill: $dark-blue;
+    }
   }
   
   svg {

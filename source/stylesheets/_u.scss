@@ -32,6 +32,10 @@
   display: block;
   height: 100%;
   outline: none;
+
+  &:hover {
+    color: inherit;
+  }
 }
 
 .u-noScroll {
