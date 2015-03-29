@@ -113,8 +113,10 @@
     color: $purple;
   }
 
-  &:hover::after {
-    border-bottom-color: $purple;
+  &.mainNavigation-sections-link--currentPage, &:hover {
+    &::after {
+      border-bottom-color: $purple;
+    }
   }
 
   @include if_narrower_than($navigation-collapse-breakpoint) {
