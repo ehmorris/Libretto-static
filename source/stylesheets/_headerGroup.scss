@@ -36,6 +36,7 @@
 .headerGroup-mainhead {
   border-bottom: 1px solid transparent;
   display: inline;
+  padding-bottom: 1px;
 
   &::before, &::after {
     content: '';
