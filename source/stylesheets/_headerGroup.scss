@@ -37,6 +37,7 @@
   border-bottom: 1px solid transparent;
   display: inline;
   padding-bottom: 1px;
+  @include transition(border $link-transition-duration);
 
   &::before, &::after {
     content: '';

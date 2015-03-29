@@ -10,19 +10,29 @@
 .pagination-previous {
   float: left;
   @include prepend-backwards-libretto-arrow;
+  @include transition(transform $link-transition-duration);
 
   @include if_wider_than(350px) {
     @include shift(2);
+  }
+
+  .no-touch &:hover {
+    @include transform(translateX(-.5rem));
   }
 }
 
 .pagination-next {
   @include append-libretto-arrow;
   float: right;
+  @include transition(transform $link-transition-duration);
 
   @include if_wider_than(350px) {
     @include direction-context(right-to-left) {
       @include shift(2);
     }
+  }
+
+  .no-touch &:hover {
+    @include transform(translateX(.5rem));
   }
 }

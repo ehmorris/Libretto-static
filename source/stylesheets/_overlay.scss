@@ -6,7 +6,8 @@
   -webkit-overflow-scrolling: touch;
   z-index: 1;
 
-  &.visible {
+  &.overlay--visible {
+    @include animation(fadein $link-transition-duration);
     display: block;
   }
 }

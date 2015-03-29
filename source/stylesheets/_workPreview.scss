@@ -4,6 +4,7 @@
   position: relative;
   @include span-columns(11);
   text-align: center;
+  @include transition(background $link-transition-duration);
 
   @include if_narrower_than($three-column-breakpoint) {
     @include fill-parent();
