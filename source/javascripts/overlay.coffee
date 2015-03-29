@@ -5,7 +5,7 @@ $ ->
     false
 
   $('.mainContainer').on 'click', '.overlay--visible', (e) ->
-    dismissable_element_clicked = e.target is $('.overlay').get(0) ||
+    dismissable_element_clicked = e.target is $('.overlay--visible').get(0) ||
                                   e.target is $('.overlay-gridContainer').get(0) ||
                                   e.target is $('.overlay-dismiss').get(0)
     return false unless dismissable_element_clicked

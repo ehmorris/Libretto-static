@@ -12,33 +12,40 @@ title: 'Who We Are'
 
 %section.people
   .avatar.avatar--large
-    = image_tag 'http://placehold.it/500x500'
-    %span.avatar-position President
-    %h4.avatar-name Neal Kane
+    = link_to '#', class: 'u-fullLink', 'data-overlay-target' => 'neal-kane' do
+      = image_tag 'http://placehold.it/500x500'
+      %span.avatar-position President
+      %h4.avatar-name Neal Kane
   .avatar.avatar--large
-    = image_tag 'http://placehold.it/500x500'
-    %span.avatar-position Associate Creative Director
-    %h4.avatar-name Nancy Boissonnet
+    = link_to '#', class: 'u-fullLink', 'data-overlay-target' => 'first-last' do
+      = image_tag 'http://placehold.it/500x500'
+      %span.avatar-position Associate Creative Director
+      %h4.avatar-name Nancy Boissonnet
   .avatar.avatar--large
-    = image_tag 'http://placehold.it/500x500'
-    %span.avatar-position Senior Writer
-    %h4.avatar-name Jason M Rubin
+    = link_to '#', class: 'u-fullLink', 'data-overlay-target' => 'first-last' do
+      = image_tag 'http://placehold.it/500x500'
+      %span.avatar-position Senior Writer
+      %h4.avatar-name Jason M Rubin
   .avatar.avatar--large
-    = image_tag 'http://placehold.it/500x500'
-    %span.avatar-position Senior Writer
-    %h4.avatar-name Alison Case
+    = link_to '#', class: 'u-fullLink', 'data-overlay-target' => 'first-last' do
+      = image_tag 'http://placehold.it/500x500'
+      %span.avatar-position Senior Writer
+      %h4.avatar-name Alison Case
   .avatar.avatar--large
-    = image_tag 'http://placehold.it/500x500'
-    %span.avatar-position Senior Writer
-    %h4.avatar-name Natasha Waibel
+    = link_to '#', class: 'u-fullLink', 'data-overlay-target' => 'first-last' do
+      = image_tag 'http://placehold.it/500x500'
+      %span.avatar-position Senior Writer
+      %h4.avatar-name Natasha Waibel
   .avatar.avatar--large
-    = image_tag 'http://placehold.it/500x500'
-    %span.avatar-position Writer
-    %h4.avatar-name Adrian Pio
+    = link_to '#', class: 'u-fullLink', 'data-overlay-target' => 'first-last' do
+      = image_tag 'http://placehold.it/500x500'
+      %span.avatar-position Writer
+      %h4.avatar-name Adrian Pio
   .avatar.avatar--large
-    = image_tag 'http://placehold.it/500x500'
-    %span.avatar-position Position
-    %h4.avatar-name First Last
+    = link_to '#', class: 'u-fullLink', 'data-overlay-target' => 'first-last' do
+      = image_tag 'http://placehold.it/500x500'
+      %span.avatar-position Position
+      %h4.avatar-name First Last
 
 %section.contributors
   %h2.u-purple Contributors
@@ -46,3 +53,19 @@ title: 'Who We Are'
     %li Chris Kane
     %li Nancy Faris
     %li Alison Case
+
+.overlay{ 'data-overlay-name' => 'neal-kane' }
+  .overlay-gridContainer
+    .overlay-lightbox
+      %header.overlay-lightbox-header
+        %h2 Neal Kane
+        = partial 'assets/overlay-dismiss-svg'
+      .overlay-content
+
+.overlay{ 'data-overlay-name' => 'first-last' }
+  .overlay-gridContainer
+    .overlay-lightbox
+      %header.overlay-lightbox-header
+        %h2 First Last
+        = partial 'assets/overlay-dismiss-svg'
+      .overlay-content
