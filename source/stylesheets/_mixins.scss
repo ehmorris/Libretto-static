@@ -5,6 +5,12 @@
   width: calc(100% + #{$overflow-width * 2});
 }
 
+@mixin inline-span-columns($columns) {
+  @include span-columns($columns);
+  display: inline-block;
+  float: none;
+}
+
 @mixin libretto-arrow-base-styles {
   color: $blue;
   font-family: $body-font;
