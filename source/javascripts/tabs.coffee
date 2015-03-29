@@ -1,7 +1,11 @@
 $ ->
   $('[data-tab-target]').on 'click', ->
-    $(this).addClass('active').siblings().removeClass('active')
-    $("[data-tab-name=#{$(this).attr('data-tab-target')}]").addClass('visible').siblings().removeClass('visible')
+    $(this).addClass('tabs-navigation-link--active')
+      .siblings()
+      .removeClass('tabs-navigation-link--active')
+    $("[data-tab-name=#{$(this).attr('data-tab-target')}]").addClass('tab-content--visible')
+      .siblings()
+      .removeClass('tab-content--visible')
     window.location.hash = $(this).attr('data-tab-target')
     false
 

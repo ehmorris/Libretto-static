@@ -96,6 +96,7 @@
 }
 
 .mainNavigation-sections-link {
+  color: $purple;
   display: inline-block;
   outline: none;
   padding: 1rem 1rem .4rem;
@@ -110,7 +111,7 @@
     width: 100%;
   }
 
-  &, &:visited, &:active {
+  &:hover {
     color: $purple;
   }
 

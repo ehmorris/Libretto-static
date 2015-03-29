@@ -22,11 +22,15 @@
   position: relative;
   @include transition(background $link-transition-duration);
 
-  .no-touch &:not(.active):hover {
+  .no-touch &:not(.tabs-navigation-link--active):hover {
     background: transparentize($purple, .75);
   }
 
-  &.active {
+  &:hover {
+    color: inherit;
+  }
+
+  &.tabs-navigation-link--active {
     background: $purple;
     color: #fff;
     @include transition(none);
@@ -71,7 +75,7 @@
     display: none;
   }
 
-  &.visible {
+  &.tab-content--visible {
     display: block;
   }
 
