@@ -7,10 +7,10 @@
     %link{ :href => 'assets/favicon.png', :rel => 'icon', :type => 'image/png' }
     %title
       = current_page.data.title ? "Libretto | #{current_page.data.title}" : 'Libretto'
-    %link{ 'href' => 'stylesheets/application.css', 'rel' => 'stylesheet', 'type' => 'text/css' }
+    %link{ 'href' => 'styles/application.css', 'rel' => 'stylesheet', 'type' => 'text/css' }
   %body(class = page_classes)
     .mainContainer
       = partial 'mainNavigation', :locals => { :extra_classes => page_classes }
       = yield
       = partial 'mainFooter'
-    %script{ 'src' => 'javascripts/application.js', 'type' => 'text/javascript' }
+    %script{ 'src' => 'scripts/application.js', 'type' => 'text/javascript' }
