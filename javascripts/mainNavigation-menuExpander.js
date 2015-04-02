@@ -1,1 +1,0 @@
-(function(){$(function(){return $(".mainNavigation-menuExpander").on("click",function(n){return $(".mainNavigation").toggleClass("mainNavigation--unCollapsed"),n.stopPropagation(),$("body").one("click",function(){return $(".mainNavigation").removeClass("mainNavigation--unCollapsed")})})})}).call(this);

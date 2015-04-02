@@ -1,1 +1,0 @@
-(function(){$(function(){return $("body").hasClass("index")?$(".hero-headline").waypoint(function(){return $(".mainNavigation").toggleClass("mainNavigation--miniLogo")},{offset:$(".mainNavigation").height()+"px"}):void 0})}).call(this);
