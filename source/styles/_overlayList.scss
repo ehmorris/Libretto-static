@@ -1,0 +1,14 @@
+.overlayList {
+  border-top: 1px solid $border-gray;
+  clear: both;
+  overflow: auto;
+
+  h2 {
+    text-align: center;
+    font-size: 2.2rem;
+
+    @include if_narrower_than($two-column-breakpoint) {
+      font-size: 1.8rem;
+    }   
+  }
+}
