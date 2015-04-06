@@ -39,7 +39,8 @@
       background: $purple;
       content: '';
       height: 18px;
-      @include position(absolute, null null -9px calc(50% - 9px));
+      margin-left: -9px;
+      @include position(absolute, null null -9px 50%);
       @include transform(rotate(45deg));
       width: 18px;
     }

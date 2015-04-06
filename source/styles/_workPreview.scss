@@ -55,7 +55,8 @@
 
 .workPreview-image {
   border-radius: 50%;
-  @include position(absolute, -35px null null calc(50% - 35px));
+  margin-left: -35px;
+  @include position(absolute, -35px null null 50%);
   width: 70px;
 }
 

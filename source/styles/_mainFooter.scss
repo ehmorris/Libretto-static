@@ -21,7 +21,7 @@
   }
 
   .logoWithPeriod {
-    height: calc(#{$header-inner-height} - 1.2rem);
+    height: $logo-height;
     opacity: 1;
 
     path {

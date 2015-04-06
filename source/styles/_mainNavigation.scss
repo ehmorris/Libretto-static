@@ -39,10 +39,9 @@
   }
 
   .logoWithPeriod {
-    height: calc(#{$header-inner-height} - .6rem);
-    margin-left: 4.25rem;
+    height: $logo-height;
+    margin: 0 0 .6rem 4.25rem;
     opacity: 1;
-    padding: 0 0 .6rem;
     @include transition(.2s);
     vertical-align: bottom;
 
