@@ -3,6 +3,7 @@
   padding-left: $overflow-width;
   padding-right: $overflow-width;
   width: calc(100% + #{$overflow-width * 2});
+  width: calc(~"100% + #{$overflow-width * 2}");
 }
 
 @mixin inline-span-columns($columns) {
