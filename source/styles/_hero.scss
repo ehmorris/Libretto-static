@@ -1,6 +1,7 @@
 .hero {
   @include fill-overflow();
   overflow: auto;
+  position: relative;
 }
 
 .hero--darkBackground {
@@ -40,6 +41,14 @@
   margin: .15em;
   text-align: center;
   word-spacing: -.1em;
+
+  .logoWithoutPeriod {
+    height: 2.05rem;
+
+    @include if_narrower_than($headline-collapse-breakpoint) {
+      height: 1.5rem;
+    }    
+  }
 
   @include if_narrower_than(880px) {
     br {

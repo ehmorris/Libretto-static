@@ -8,10 +8,10 @@
 %section.hero.hero--darkBackground.services
   .excerpt-imageSide
     = image_tag 'http://placehold.it/560x590'
-  .excerpt-contentSide
+  .excerpt-contentSide.excerpt-contentSide--topMargin
     .headerGroup
       %h2.headerGroup-mainhead We do four things extremely well:
-    %ul.arrowList.arrowList--large
+    %ul.arrowList.arrowList--large.arrowList--largeMargin
       %li
         = link_to 'Communications Strategy', 'what-we-do.html#communications-strategy'
       %li
@@ -48,7 +48,7 @@
     %span.quote-attribution Goethe
     %span.u-boxLabel Mantra #14
 
-%section.additional
+%section.excerptColumns
   - 3.times do
     .excerpt.excerpt--column
       = link_to 'blog-entry.html', class: 'u-fullLink' do

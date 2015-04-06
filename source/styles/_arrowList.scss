@@ -20,3 +20,12 @@
 .arrowList--large {
   font-size: 1.5rem;
 }
+
+.arrowList--largeMargin {
+  margin-bottom: 4rem;
+  @include shift(1 of 11);
+
+  li {
+    margin: 1rem 0;
+  }
+}
