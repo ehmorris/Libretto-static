@@ -3,7 +3,7 @@ $ ->
 
   $('.avatar').each ->
     $avatar_position = $(@).find('.avatar-position')
-    $avatar_name = $(@).find('.avatar-position')
+    $avatar_name = $(@).find('.avatar-name')
 
     return unless $avatar_position.text().split(',').length > 1
 
