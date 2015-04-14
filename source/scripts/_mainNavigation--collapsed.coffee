@@ -1,5 +1,5 @@
 $ ->
-  return unless ($('body').find('.hero-headline'))
+  return unless ($('.mainNavigation').hasClass('mainNavigation--miniLogo'))
 
   $('.hero-headline').waypoint(( ->
     $('.mainNavigation').toggleClass('mainNavigation--miniLogo')
