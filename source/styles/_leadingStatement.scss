@@ -9,6 +9,7 @@
   h2, strong {
     font-family: $header-font;
     font-size: 2rem;
+    line-height: 1.2;
     margin-top: 0;
 
     @include if_narrower_than($two-column-breakpoint) {
