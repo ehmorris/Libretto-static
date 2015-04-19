@@ -10,14 +10,13 @@
 }
 
 .avatar--large {
-  text-align: center;
-
   .avatar-imageWrapper {
     margin-bottom: 1rem;
   }
 
   .avatar-position, .avatar-name {
     display: block;
+    text-align: center;
   }
 }
 

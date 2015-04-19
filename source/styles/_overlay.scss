@@ -3,6 +3,7 @@
   display: none;
   overflow-y: scroll;
   @include position(fixed, 0px 0px 0px 0px);
+  text-align: left;
   -webkit-overflow-scrolling: touch;
   z-index: 1;
 
@@ -70,7 +71,30 @@
 }
 
 .overlay-content {
-  padding: 1rem 0;
-  @include shift(2 of 21);
-  @include span-columns(18 of 21);
+  font-size: 1rem;
+  padding: 1rem 0 3rem;
+
+  @include if_wider_than($two-column-breakpoint) {
+    @include shift(2 of 21);
+    @include span-columns(18 of 21);
+  }
+
+  @include if_narrower_than($two-column-breakpoint) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .avatar {
+    @include if_wider_than($two-column-breakpoint) {
+      @include direction-context(right-to-left) {
+        @include span-columns(4 of 18);
+      }
+    }
+  }
+
+  .overlay-content-contentSide {
+    @include if_wider_than($two-column-breakpoint) {
+      @include span-columns(13 of 18);
+    }
+  }
 }

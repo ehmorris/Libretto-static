@@ -16,6 +16,18 @@ title: 'Who We Are'
       %div.avatar-imageWrapper{ style: 'background-image: url(http://placehold.it/500x500)' }
       %span.avatar-position President
       %h4.avatar-name Neal Kane
+    .overlay{ 'data-overlay-name' => 'neal-kane' }
+      .overlay-gridContainer
+        .overlay-lightbox
+          %header.overlay-lightbox-header
+            %h2 Neal Kane
+            = partial 'assets/overlay-dismiss-svg'
+          .overlay-content.longform
+            .avatar
+              %div.avatar-imageWrapper{ style: 'background-image: url(http://placehold.it/500x500)' }
+            .overlay-content-contentSide
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis augue massa. Suspendisse eget lectus justo. Fusce elementum nibh vitae dapibus auctor. Nunc ultrices et velit et porta. Phasellus vehicula libero nec gravida cursus. Maecenas sodales purus iaculis, rhoncus ipsum ut, cursus leo. Nulla quis eros est. Nunc mattis lectus vel metus molestie, et faucibus dolor tempor. Mauris nec consequat arcu, ac auctor est. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+              %p Praesent mollis est non lorem condimentum consectetur. Maecenas consectetur risus id sapien gravida bibendum. Pellentesque turpis orci, ornare vel auctor at, posuere et augue. Donec ultricies, est vitae placerat egestas, est dui malesuada lectus, ut tempus arcu neque a nisl. Aenean laoreet dui sit amet maximus pulvinar. Curabitur id aliquet nisi. Duis ut malesuada lorem. Duis at est diam. Cras at interdum ligula.
   .avatar.avatar--large
     = link_to '#', class: 'u-fullLink', 'data-overlay-target' => 'first-last' do
       %div.avatar-imageWrapper{ style: 'background-image: url(http://placehold.it/500x500)' }
@@ -53,19 +65,3 @@ title: 'Who We Are'
     %li Chris Kane
     %li Nancy Faris
     %li Alison Case
-
-.overlay{ 'data-overlay-name' => 'neal-kane' }
-  .overlay-gridContainer
-    .overlay-lightbox
-      %header.overlay-lightbox-header
-        %h2 Neal Kane
-        = partial 'assets/overlay-dismiss-svg'
-      .overlay-content
-
-.overlay{ 'data-overlay-name' => 'first-last' }
-  .overlay-gridContainer
-    .overlay-lightbox
-      %header.overlay-lightbox-header
-        %h2 First Last
-        = partial 'assets/overlay-dismiss-svg'
-      .overlay-content
