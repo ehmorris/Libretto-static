@@ -8,7 +8,8 @@ title: 'The Cobbler’s Children'
 
 - 10.times do
   .blogExcerpt
-    = image_tag 'http://placehold.it/200x200', class: 'blogExcerpt-avatar'
+    .avatar.blogExcerpt-avatar
+      .avatar-imageWrapper{ style: 'background-image: url(http://placehold.it/300x300)' }
     %article
       = link_to 'blog-entry.html', class: 'u-fullLink' do
         .headerGroup.headerGroup--small

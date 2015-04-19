@@ -1,4 +1,5 @@
 .blogExcerpt {
+  clear: both;
   margin-bottom: 4rem;
   overflow: auto;
 
@@ -37,8 +38,6 @@
 }
 
 .blogExcerpt-avatar {
-  border-radius: 50%;
-
   @include if_wider_than($two-column-breakpoint) {
     @include shift(.5);
     @include span-columns(2);
