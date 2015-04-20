@@ -4,6 +4,7 @@
 
 .workDetail-article-content {
   margin-top: 2rem;
+
   @include if_wider_than($three-column-breakpoint) {
     @include span-columns(14);
     @include shift(1);
