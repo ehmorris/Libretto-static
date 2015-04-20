@@ -76,6 +76,10 @@
   }
 
   .workPreview--fullWidth & {
-    max-width: 75%;
+    @include if_wider_than($two-column-breakpoint) {
+      box-sizing: content-box;
+      padding: 0 12%;
+      width: 75%;
+    }
   }
 }
