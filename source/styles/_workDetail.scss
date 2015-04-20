@@ -1,5 +1,9 @@
 .workDetail-article {
   overflow: auto;
+
+  + #workDetailGallery {
+    margin: 1rem 0;
+  }
 }
 
 .workDetail-article-content {
