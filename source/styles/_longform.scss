@@ -12,8 +12,11 @@
   }
 
   .longform-emphasize, h1 {
+    color: $purple;
+    font-family: $body-font;
     font-size: 1.75rem;
     font-style: italic;
+    font-weight: normal;
 
     @include if_narrower_than($two-column-breakpoint) {
       font-size: 1.5rem;
