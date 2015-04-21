@@ -28,3 +28,9 @@ svg {
   max-width: 100%;
   max-height: 100%;
 }
+
+article {
+  @include if_narrower_than($two-column-breakpoint) {
+    overflow-x: hidden;
+  }
+}
