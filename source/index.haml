@@ -1,10 +1,10 @@
 %section.hero.hero--largeMargin
   %h1.hero-headline
-    = partial 'assets/logoWithoutPeriod-svg'
-    helps organizations articulate
+    [logo] helps organizations articulate
     %br
     what they do, believe, and hope to achieve
-
+  %script.logoTemplate{ 'type' => 'text/template' }
+    = partial 'assets/logoWithoutPeriod-svg'
 %section.hero.hero--darkBackground.services
   .excerpt-imageSide
     = image_tag 'http://placehold.it/560x590'
