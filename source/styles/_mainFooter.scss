@@ -66,7 +66,7 @@
       display: none;
     }
 
-    .twitter svg.twitter, .facebook svg.facebook {
+    &.twitter svg.twitter, &.facebook svg.facebook {
       display: block;
     }
   }
