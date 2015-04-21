@@ -61,11 +61,20 @@
     &:hover svg {
       fill: $dark-blue;
     }
+
+    &:not(.twitter):not(.facebook) {
+      display: none;
+    }
+
+    .twitter svg.twitter, .facebook svg.facebook {
+      display: block;
+    }
   }
   
   svg {
-    height: 20px;
+    display: none;
     fill: $blue;
+    height: 20px;
   }
 }
 
