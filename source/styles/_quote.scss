@@ -18,6 +18,10 @@
     @include if_narrower_than($headline-collapse-breakpoint) {
       font-size: 2rem;
     }
+
+    &:last-child {
+      padding-bottom: 5rem;
+    }
   }
 }
 
