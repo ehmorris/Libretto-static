@@ -19,7 +19,7 @@
   }
 
   @include if_wider_than($three-column-breakpoint) {
-    &:not(.workPreview--fullWidth):nth-child(even) {
+    &:not(.workPreview--fullWidth):nth-of-type(even) {
       @include shift(1);
     }
   }
