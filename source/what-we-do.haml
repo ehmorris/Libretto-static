@@ -34,7 +34,7 @@ title: 'What We Do'
         %article
           %p Communications strategy.
 
-    .tab-content.longform{ 'data-tab-name' => 'messaging' }
+    .tab-content.longform{ 'data-tab-name' => 'messaging', 'data-tab-title' => 'Messaging', 'data-example-case-study-url-id' => '12' }
       .tab-section-header
         %span Messaging:
         %span A Solid Foundation
@@ -42,11 +42,16 @@ title: 'What We Do'
         %article
           %p.longform-emphasize “Messaging” is a term that’s often misunderstood. For us, it’s about helping clients achieve internal alignment around their beliefs and priorities, and then creating a platform they can use to share their story in presentations, online, and in print.
           %p From elevator pitches and brand pillars to targeted messages for key audiences, Libretto has completed dozens of successful messaging engagements for prestigious institutions and private-sector organizations. We have a well-deserved reputation for delivering robust, elegantly crafted messaging guides that help clients speak with a clear, differentiated, and unified voice. These guides form the basis for the public-facing communications that they (or we) go on to develop.
-      .tab-caseStudy
+      .tab-caseStudy{ 'data-url-id' => '12' }
         = link_to 'work-detail.html', class: 'u-fullLink' do
           .headerGroup.headerGroup--small
-            %span.headerGroup-prehead Messaging case study
+            %span.headerGroup-prehead (should say messaging before this) case study
             %h2.headerGroup-mainhead.headerGroup-mainhead--arrow Berklee College of Music: Sounds like groundbreaking — and it is
+      .tab-caseStudy{ 'data-url-id' => '11' }
+        = link_to 'work-detail.html', class: 'u-fullLink' do
+          .headerGroup.headerGroup--small
+            %span.headerGroup-prehead case study
+            %h2.headerGroup-mainhead.headerGroup-mainhead--arrow Shouldn't show up
 
     .tab-content.longform{ 'data-tab-name' => 'names-and-themes' }
       .tab-section-header
