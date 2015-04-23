@@ -15,3 +15,9 @@ $ ->
     $("[data-tab-target=#{window_hash}]").click()
   else
     $('[data-tab-target]').first().click()
+
+  if $('.tab-content .tab-section-header').first().is(':visible')
+    return unless $("[data-tab-name=#{window_hash}]").length
+
+    scroll_top = $("[data-tab-name=#{window_hash}]").offset().top - $('.mainNavigation').height()
+    $(window).scrollTop(scroll_top)
