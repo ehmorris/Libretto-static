@@ -84,6 +84,7 @@
   @include fill-parent();
   line-height: 0;
   overflow: hidden;
+  clear: both;
 
   img {
     width: 100%;

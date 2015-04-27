@@ -8,7 +8,7 @@ $ ->
     dismissable_element_clicked = e.target is $('.overlay--visible').get(0) ||
                                   e.target is $('.overlay--visible .overlay-gridContainer').get(0) ||
                                   e.target is $('.overlay--visible .overlay-dismiss').get(0)
-    return false unless dismissable_element_clicked
+    return unless dismissable_element_clicked
 
     $(this).toggleClass('overlay--visible')
     $('body').toggleClass('u-noScroll')
