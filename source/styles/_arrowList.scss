@@ -30,6 +30,12 @@
   }
 }
 
+.arrowList--hangingBullet {
+  @include if_wider_than($two-column-breakpoint) {
+    padding-left: 0;
+  }
+}
+
 .arrowList--twoColumns {
   @include if_wider_than($two-column-breakpoint) {
     @include columns(2);
