@@ -12,7 +12,7 @@
     margin: 1rem 0 0 0;
     width: 100%;
 
-    a {
+    > a {
       @include append-libretto-arrow;
       color: $blue;
     }
