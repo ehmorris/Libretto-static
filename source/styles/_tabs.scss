@@ -107,7 +107,7 @@
   margin-top: 4rem;
 
   @include if_narrower_than($three-column-breakpoint) {
-    margin-top: 2rem;
+    margin-top: 0;
   }
 
   @include if_wider_than($two-column-breakpoint) {
