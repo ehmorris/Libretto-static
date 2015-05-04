@@ -17,6 +17,14 @@
       color: $blue;
     }
   }
+
+  h2 {
+    margin: 1rem 0 0;
+  }
+
+  .sqs-block-content>*:first-child {
+    margin-top: 1rem;
+  }
 }
 
 .flatList--twoColumns {
