@@ -44,10 +44,14 @@
 
   h2 {
     margin: 0;
-    @include shift(2 of 21);
+
+    @include if_wider_than($overlay-breakpoint) {
+      @include shift(2 of 21);
+    }
 
     @include if_narrower_than($overlay-breakpoint) {
       font-size: 1rem;
+      padding: 0 51px 0 1rem;
     }
   }
 }
