@@ -47,6 +47,7 @@
 
     @include if_wider_than($overlay-breakpoint) {
       @include shift(2 of 21);
+      padding: 0 12% 0 0;
     }
 
     @include if_narrower_than($overlay-breakpoint) {
