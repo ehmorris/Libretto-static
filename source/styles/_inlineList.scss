@@ -14,6 +14,10 @@
       &:not(:nth-of-type(4n+1)) {
         @include shift(1);
       }
+
+      &:nth-of-type(4n+1) {
+        clear: left;
+      }
     }
 
     @include if_narrower_than($three-column-breakpoint) {
@@ -21,6 +25,10 @@
 
       &:not(:nth-of-type(2n+1)) {
         @include shift(1);
+      }
+
+      &:nth-of-type(2n+1) {
+        clear: left;
       }
     }
 
