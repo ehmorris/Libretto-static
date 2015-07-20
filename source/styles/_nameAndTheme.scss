@@ -27,7 +27,7 @@
 
 .nameAndTheme-imageContainer {
   @include transition(background-position $link-transition-duration);
-  background-position: center -100%;
+  background-position: center 0%;
   background-repeat: no-repeat;
   background-size: 100%;
   min-height: 400px;
