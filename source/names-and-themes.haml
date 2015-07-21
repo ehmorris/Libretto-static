@@ -6,12 +6,21 @@ title: 'Names and Themes'
   %h1.hero-headline
     %strong.u-purple Names and Themes
 
-- 8.times do
-  .nameAndTheme
-    = link_to 'work-detail.html', class: 'u-fullLink nameAndTheme-imageContainer', style: 'background-image: url(http://placehold.it/300x300)' do
-      .nameAndTheme-detail
-        .headerGroup.headerGroup--small.headerGroup--tight
-          %h2.headerGroup-mainhead 10,000 Reasons
-          %span.headerGroup-prehead The Campaign for Salem State
-        .nameAndTheme-detail-body
-          %p $100 million comprehensive campaign for Salem State University in Massachusetts — the largest in their history
+.nameAndTheme
+  = link_to 'work-detail.html', class: 'u-fullLink' do
+    = image_tag('http://placehold.it/600x600', :class => 'nameAndTheme-image')
+    .nameAndTheme-detail
+      .headerGroup.headerGroup--small.headerGroup--tight
+        %h2.headerGroup-mainhead 10,000 Reasons
+        %span.headerGroup-prehead The Campaign for Salem State
+      .nameAndTheme-detail-body
+        %p $100 million comprehensive campaign for Salem State University in Massachusetts — the largest in their history
+
+.nameAndTheme
+  = image_tag('http://placehold.it/600x120', :class => 'nameAndTheme-image')
+  .nameAndTheme-detail
+    .headerGroup.headerGroup--small.headerGroup--tight
+      %h2.headerGroup-mainhead 10,000 Reasons
+      %span.headerGroup-prehead The Campaign for Salem State
+    .nameAndTheme-detail-body
+      %p $100 million comprehensive campaign for Salem State University in Massachusetts — the largest in their history

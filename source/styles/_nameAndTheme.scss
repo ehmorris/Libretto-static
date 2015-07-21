@@ -4,14 +4,27 @@
   overflow: hidden;
   position: relative;
 
-  .no-touch &:hover {
-    .nameAndTheme-detail {
-      @include transform(translateY(0%));
-    }
+  .no-touch & {
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+    height: 320px;
+    
+    &:hover {
+      .nameAndTheme-detail {
+        @include transform(translateY(0%));
+      }
 
-    .nameAndTheme-imageContainer {
-      background-position: center 0%;
-    }    
+      .nameAndTheme-image {
+        @include transform(translateY(-25%));
+      }
+    }
+  }
+
+  .touch &:nth-child(odd) {
+    @include if_wider_than($two-column-breakpoint) {
+      clear: left;
+    }
   }
 
   @include if_narrower_than($three-column-breakpoint) {
@@ -23,33 +36,38 @@
       @include shift(1);
     }
   }
+
+  .u-fullLink p:last-of-type {
+    @include append-libretto-arrow;
+  }
 }
 
-.nameAndTheme-imageContainer {
-  @include transition(background-position $link-transition-duration);
-  background-position: center 0%;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  min-height: 400px;
+.nameAndTheme-image {
+  @include transition(transform $link-transition-duration);
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
 
-  .no-touch & {
-    @include transition(background-position $link-transition-duration);
-    background-position: center;
-    min-height: 320px;
+  .touch & {
+    @include if_wider_than($two-column-breakpoint) {
+      margin: auto;
+      max-height: 200px;
+    }
   }
 }
 
 .nameAndTheme-detail {
   background: $gray;
-  bottom: 0;
   color: #fff;
   padding: 1.6rem 2.4rem .6rem;
-  position: absolute;
   width: 100%;
 
   .no-touch & {
     @include transform(translateY(100%));
     @include transition(transform $link-transition-duration);
+    bottom: 0;
+    left: 0;
+    position: absolute;
   }
 
   .headerGroup {
@@ -63,9 +81,5 @@
 
   p {
     margin: 0;
-  }
-
-  p:last-of-type {
-    @include append-libretto-arrow;
   }
 }
