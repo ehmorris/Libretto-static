@@ -9,7 +9,9 @@
     @include if_narrower_than($two-column-breakpoint) {
       margin-bottom: 2rem;
     }
+  }
 
+  > .avatar:not(.avatar--fullWidth) {
     @include if_wider_than($three-column-breakpoint) {
       @include inline-span-columns(7);
 
