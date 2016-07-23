@@ -7,7 +7,13 @@ title: 'Fifty Years On'
     %strong.u-purple Fifty Years On
 
 .hero.blogAuthor
-  %p Written by <a href='#'>Neal Kane</a> on December 28, 2014
+  %p.blogAuthor-byline Written by <a href='#'>Neal Kane</a> on December 28, 2014
+  %p.blogAuthor-sharing
+    %span Share this:
+    = link_to '#', class: 'blogAuthor-sharing-link' do
+      = partial 'assets/twitter-svg'
+    = link_to '#', class: 'blogAuthor-sharing-link' do
+      = partial 'assets/facebook-svg'
 
 .blogEntry.longform
   %article

@@ -1,0 +1,34 @@
+.blogAuthor {
+  background: $lightest-gray;
+  border: 1px solid $border-gray;
+  border-width: 1px 0 1px;
+  overflow: auto;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+
+  p {
+    @include shift(3);
+    @include span-columns(17);
+  }
+}
+
+.blogAuthor-byline {
+  font-family: $header-font;
+  font-weight: bold;
+}
+
+.blogAuthor-sharing {
+  margin-top: 0;
+}
+
+.blogAuthor-sharing-link {
+  display: inline-block;
+  margin: -.2rem 0 0 .5rem;
+  vertical-align: middle;
+
+  svg {
+    display: block;
+    fill: $blue;
+    height: 1rem;
+  }
+}
